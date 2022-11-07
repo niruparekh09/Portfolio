@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsGithub } from 'react-icons/bs';
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillMail,
+  AiFillInstagram,
 } from 'react-icons/ai';
 import nrv from './Images/nrv-3d-1.png';
 import design from './Images/design.png';
@@ -33,7 +34,9 @@ root.render(
             Nirav Parekh
           </h1>
           <ul className="flex items-center">
-            
+            <li>
+              <BsGithub className="text-teal-500 cursor-pointer text-4xl dark:text-white" />
+            </li>
             <li>
               <a
                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-6"
@@ -70,6 +73,9 @@ root.render(
           <a href="https://twitter.com/niruparekh09" target="blank">
             <AiFillTwitterCircle />
           </a>
+          <a href="https://twitter.com/niruparekh09" target="blank">
+            <AiFillInstagram />
+          </a>
         </div>
         <div className=" relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
           <img
@@ -81,228 +87,248 @@ root.render(
         </div>
       </section>
       <section>
-          <div>
-            <h3 className=" text-3xl py-1 pt-10 dark:text-blue-50">
-              Who I Am?
+        <div>
+          <h3 className=" text-3xl py-1 pt-10 dark:text-blue-50">Who I Am?</h3>
+          <p className=" text-md py-5 leading-8 text-gray-800 dark:text-blue-50">
+            Hello, My name is Nirav Parekh and I am a Raipur based student who
+            is currently pursuing B.Tech. in Computer Science. I am a Frontend
+            webdeveloper and have a good knowledge of technologies like
+            <span className="text-teal-500">
+              {' '}
+              Reactjs,Tailwind CSS,SCSS,JQuery{' '}
+            </span>
+            etc. I am also a{' '}
+            <span className="text-teal-500">
+              {' '}
+              Internshala Certified UI/UX Designer{' '}
+            </span>
+            and have desgined many website and apps.
+          </p>
+          <p className=" text-md py-5 leading-8 text-gray-800 dark:text-blue-50">
+            I have good knowledge of computer fundamentals and core CS subjects
+            like Data Structures and Algorithm, OOPs, DBMS, OS, Computer
+            Networking Etc.
+          </p>
+        </div>
+        <div className="lg:flex gap-10 ">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:border">
+            <img
+              src={design}
+              width={100}
+              height={100}
+              alt="design"
+              className=" m-auto"
+            />
+            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-blue-50">
+              Beautiful Designs
             </h3>
-            <p className=" text-md py-5 leading-8 text-gray-800 dark:text-blue-50">
-              Hello, My name is Nirav Parekh and I am a Raipur based student who
-              is currently pursuing B.Tech. in Computer Science. I am a Frontend
-              webdeveloper and have a good knowledge of technologies like
-              <span className="text-teal-500">
-                {' '}
-                Reactjs,Tailwind CSS,SCSS,JQuery{' '}
-              </span>
-              etc. I am also a{' '}
-              <span className="text-teal-500">
-                {' '}
-                Internshala Certified UI/UX Designer{' '}
-              </span>
-              and have desgined many website and apps.
+            <p className="py-2 dark:text-blue-50">
+              Creating elegant designs with a versatile understanding and for
+              your needs.
             </p>
-            <p className=" text-md py-5 leading-8 text-gray-800 dark:text-blue-50">
-              I have good knowledge of computer fundamentals and core CS
-              subjects like Data Structures and Algorithm, OOPs, DBMS, OS,
-              Computer Networking Etc.
+            <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">Photoshop</p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">Figma</p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">Adobe XD</p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">
+              Adobe Illustrator
+            </p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">Canva</p>
+          </div>
+          <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:border">
+            <img
+              src={code}
+              width={100}
+              height={100}
+              alt="design"
+              className=" m-auto"
+            />
+            <h3 className="text-lg font-medium pt-8 pb-2 dark:text-blue-50">
+              React Developer
+            </h3>
+            <p className="py-2 dark:text-blue-50">
+              I develop beautiful and functional web apps using ReactJs and
+              NextJs.
+            </p>
+            <h4 className="py-4 text-teal-600">Technology I Use</h4>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">
+              ReactJs and NextJs
+            </p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">HTML</p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">
+              CSS and SASS
+            </p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">JavaScript</p>
+            <p className=" text-gray-800 py-1 dark:text-blue-50">
+              Firebase (Backend)
             </p>
           </div>
-          <div className="lg:flex gap-10 ">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:border">
-              <img
-                src={design}
-                width={100}
-                height={100}
-                alt="design"
-                className=" m-auto"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-blue-50">
-                Beautiful Designs
-              </h3>
-              <p className="py-2 dark:text-blue-50">
-                Creating elegant designs with a versatile understanding and for
-                your needs.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">Photoshop</p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">Figma</p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">Adobe XD</p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">
-                Adobe Illustrator
-              </p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">Canva</p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:border">
-              <img
-                src={code}
-                width={100}
-                height={100}
-                alt="design"
-                className=" m-auto"
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-blue-50">
-                React Developer
-              </h3>
-              <p className="py-2 dark:text-blue-50">
-                I develop beautiful and functional web apps using ReactJs and
-                NextJs.
-              </p>
-              <h4 className="py-4 text-teal-600">Technology I Use</h4>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">
-                ReactJs and NextJs
-              </p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">HTML</p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">
-                CSS and SASS
-              </p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">
-                JavaScript
-              </p>
-              <p className=" text-gray-800 py-1 dark:text-blue-50">
-                Firebase (Backend)
-              </p>
-            </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h3 className=" text-3xl py-1 dark:text-blue-50">Portfolio</h3>
+          <h4 className="text-xl py-4 text-teal-600">My Designs</h4>
+        </div>
+        <div className=" flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={web1}
+              alt="img1"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
           </div>
-        </section>
-        <section>
-          <div>
-            <h3 className=" text-3xl py-1 dark:text-blue-50">Portfolio</h3>
-            <h4 className="text-xl py-4 text-teal-600">My Designs</h4>
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={web2}
+              alt="img2"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
           </div>
-          <div className=" flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={web1}
-                alt="img1"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={web2}
-                alt="img2"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={web3}
-                alt="img3"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={app1}
-                alt="img3"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={app2}
-                alt="img4"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={app3}
-                alt="img5"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={web3}
+              alt="img3"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
           </div>
-        </section>
-        <section>
-          <div>
-            <h4 className="text-xl py-4 text-teal-600">My Webistes</h4>
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={app1}
+              alt="img3"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
           </div>
-          <div className=" flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className=" basis-1/3 flex-1">
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={app2}
+              alt="img4"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
+          </div>
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={app3}
+              alt="img5"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <h4 className="text-xl py-4 text-teal-600">My Webistes</h4>
+        </div>
+        <div className=" flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+          <div className=" basis-1/3 flex-1">
+            <a
+              href="https://csb-lb0fv6.netlify.app/"
+              target="blank"
+              className=""
+            >
               <img
                 src={webs1}
                 alt="img1"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover hover:scale-1025 transition delay-150 duration-300 ease-in-out"
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
               />
-            </div>
-            <div className=" basis-1/3 flex-1">
+            </a>
+          </div>
+          <div className=" basis-1/3 flex-1">
+            <a
+              href="https://niruparekh09.github.io/Binge-er/"
+              target="blank"
+              className=""
+            >
               <img
                 src={webs2}
                 alt="img2"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover hover:scale-1025 transition delay-150 duration-300 ease-in-out"
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
               />
-            </div>
-            <div className=" basis-1/3 flex-1">
+            </a>
+          </div>
+          <div className=" basis-1/3 flex-1">
+            <a
+              href="https://niruparekh09.github.io/SWWIPE/"
+              target="blank"
+              className=""
+            >
               <img
                 src={webs3}
                 alt="img3"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover hover:scale-1025 transition delay-150 duration-300 ease-in-out"
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
               />
-            </div>
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={webs4}
-                alt="img3"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
-            <div className=" basis-1/3 flex-1">
+            </a>
+          </div>
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={webs4}
+              alt="img3"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
+          </div>
+          <div className=" basis-1/3 flex-1">
+            <a
+              href="https://niruparekh09.github.io/MySite1/"
+              target="blank"
+              className=""
+            >
               <img
                 src={webs5}
                 alt="img4"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover hover:scale-1025 transition delay-150 duration-300 ease-in-out"
                 width={'100%'}
                 height={'100%'}
                 layout="responsive"
               />
-            </div>
-            <div className=" basis-1/3 flex-1">
-              <img
-                src={webs6}
-                alt="img5"
-                className="rounded-lg object-cover"
-                width={'100%'}
-                height={'100%'}
-                layout="responsive"
-              />
-            </div>
+            </a>
           </div>
-        </section>
-        <footer>
-          <div className=" py-5 text-teal-600 text-center">
-            niruparekh09@gmail.com | © 2022 Nirav Parekh
+          <div className=" basis-1/3 flex-1">
+            <img
+              src={webs6}
+              alt="img5"
+              className="rounded-lg object-cover"
+              width={'100%'}
+              height={'100%'}
+              layout="responsive"
+            />
           </div>
-        </footer>
+        </div>
+      </section>
+      <footer>
+        <div className=" py-5 text-teal-600 text-center">
+          niruparekh09@gmail.com | © 2022 Nirav Parekh
+        </div>
+      </footer>
     </main>
   </div>
 );
