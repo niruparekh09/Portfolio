@@ -79,12 +79,13 @@ root.render(
             <AiFillInstagram className="w-3/4 md:w-full" />
           </a>
         </div>
-        <div className=" relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+        <div className=" relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 mt-20 overflow-hidden sm:h-80 sm:w-80 md:h-96 md:w-96">
           <img
             src={nrv}
             alt="Nirav 3d avatar"
             layout="fill"
             objectFit="cover"
+            className=" w-11/12 sm:w-full mt-3 ml-2 sm:m-0"
           />
         </div>
       </section>
