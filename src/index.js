@@ -35,7 +35,9 @@ root.render(
           </h1>
           <ul className="flex items-center">
             <li>
-              <BsGithub className="text-teal-500 cursor-pointer text-4xl dark:text-white" />
+              <a href="https://github.com/niruparekh09" target="blank">
+                <BsGithub className="text-teal-500 cursor-pointer text-4xl dark:text-white" />
+              </a>
             </li>
             <li>
               <a
@@ -73,7 +75,7 @@ root.render(
           <a href="https://twitter.com/niruparekh09" target="blank">
             <AiFillTwitterCircle />
           </a>
-          <a href="https://twitter.com/niruparekh09" target="blank">
+          <a href="https://www.instagram.com/nrv_photography_/" target="blank">
             <AiFillInstagram />
           </a>
         </div>
