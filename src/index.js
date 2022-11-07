@@ -42,7 +42,7 @@ root.render(
             <li>
               <a
                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md m-6"
-                href="https://drive.google.com/file/d/1GiPXZDJE8PUgFeNpg02nYhWUir-8Qx9w/view?usp=share_link"
+                href="https://drive.google.com/file/d/1CKX68dqExsb6_7a5q1fhBg1v9chCuf8d/view?usp=share_link"
                 target="blank"
               >
                 Resume
