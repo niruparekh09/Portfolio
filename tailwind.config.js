@@ -9,6 +9,9 @@ module.exports = {
       },
       scale: {
         '1025': '1.025',
+      },
+      maxWidth: {
+        '3/4': '75%',
       }
     },
   },

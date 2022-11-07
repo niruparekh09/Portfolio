@@ -62,21 +62,21 @@ root.render(
             of programming languages like C,C++,JavaScript,Java etc.
           </p>
         </div>
-        <div className=" text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-blue-100">
+        <div className=" text-5xl flex justify-center gap-10 py-3 text-gray-600  dark:text-blue-100 md:gap-16">
           <a href="mailto:niruparekh09@gmail.com">
-            <AiFillMail />
+            <AiFillMail className="w-3/4 md:w-full" />
           </a>
           <a
             href="https://www.linkedin.com/in/nirav-parekh-2b3310197/"
             target="blank"
           >
-            <AiFillLinkedin />
+            <AiFillLinkedin className="w-3/4 md:w-full" />
           </a>
           <a href="https://twitter.com/niruparekh09" target="blank">
-            <AiFillTwitterCircle />
+            <AiFillTwitterCircle className="w-3/4 md:w-full" />
           </a>
           <a href="https://www.instagram.com/nrv_photography_/" target="blank">
-            <AiFillInstagram />
+            <AiFillInstagram className="w-3/4 md:w-full" />
           </a>
         </div>
         <div className=" relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
