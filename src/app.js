@@ -4,7 +4,6 @@ import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillMail,
-  AiFillInstagram,
 } from 'react-icons/ai';
 import nrv from './Images/nrv-3d-1.png';
 import design from './Images/design.png';
@@ -79,8 +78,8 @@ function App() {
               <AiFillTwitterCircle className="w-3/4 md:w-full" />
             </a>
             <a href="https://github.com/niruparekh09" target="blank">
-                  <BsGithub className="w-3/4 md:w-full" />
-                </a>
+              <BsGithub className="w-3/4 md:w-full" />
+            </a>
           </div>
           <div className=" relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-64 h-64 mt-20 overflow-hidden sm:h-80 sm:w-80 md:h-96 md:w-96">
             <img
