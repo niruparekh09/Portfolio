@@ -103,7 +103,7 @@ function App() {
               webdeveloper and have a good knowledge of technologies like
               <span className="text-teal-500">
                 {' '}
-                Reactjs,Tailwind CSS,SCSS,JQuery{' '}
+                Reactjs,NextJs,Tailwind CSS,SCSS,JQuery{' '}
               </span>
               etc. I am also a{' '}
               <span className="text-teal-500">
