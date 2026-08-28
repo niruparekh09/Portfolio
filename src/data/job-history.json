@@ -1,12 +1,27 @@
 [
   {
+    "company": "Upcoming Role",
+    "location": "Pune, Maharashtra",
+    "positions": [
+      {
+        "title": "SWE",
+        "yearStart": "Sep 2026",
+        "yearEnd": "Present",
+        "dateLabel": "Starts Sep 2026",
+        "highlights": [
+          "Will be joining Upcoming org as SWE in Sep 2026."
+        ]
+      }
+    ]
+  },
+  {
     "company": "Tata Technologies",
     "location": "Pune, Maharashtra",
     "positions": [
       {
         "title": "Software Development Engineer",
         "yearStart": "May 2024",
-        "yearEnd": "Present",
+        "yearEnd": "Sep 2026",
         "highlights": [
           "Designed and developed RESTful APIs for the full vehicle order lifecycle, reducing order processing time by approximately 40%.",
           "Built dynamic filtering and search for complex multi-condition fleet queries, reducing admin query resolution time by over 30%.",

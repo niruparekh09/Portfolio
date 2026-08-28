@@ -30,6 +30,17 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 2rem;
+  scrollbar-color: var(--color-border-strong) transparent;
+}
+
 body {
   margin: 0;
   color: var(--color-primary-text);
@@ -37,7 +48,7 @@ body {
   background-image: none;
   font-family: "Geist", "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  padding: 20px;
+  padding: 4.5rem 1.5rem 3rem;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -46,6 +57,27 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: var(--color-border-strong);
+  background-clip: padding-box;
+}
+
+::selection {
+  color: var(--color-primary-background);
+  background: var(--color-accent-1);
 }
 
 h1,
@@ -55,48 +87,57 @@ h4,
 h5,
 h6 {
   font-family: "General Sans", "Geist", Arial, Helvetica, sans-serif;
-  margin-top: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
   text-transform: none;
-  letter-spacing: 0.008em;
+  letter-spacing: -0.018em;
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 650;
+  font-size: 2.45rem;
+  font-weight: 680;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 620;
+  font-size: 1.9rem;
+  font-weight: 660;
 }
 
 h3 {
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 1.45rem;
+  font-weight: 640;
 }
 
 h4 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 620;
 }
 
 h5 {
   font-size: 1.25rem;
-  font-weight: 580;
+  font-weight: 600;
 }
 
 h6 {
   font-size: 1rem;
-  font-weight: 560;
+  font-weight: 600;
 }
 
 a {
   color: var(--color-accent-1);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  text-decoration-skip-ink: auto;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent-1);
+  outline-offset: 3px;
 }
 
 p {
-  line-height: 1.45;
+  line-height: 1.65;
 }
 
 hr {
@@ -110,7 +151,7 @@ hr {
 table {
   border-spacing: 0;
   background: var(--color-primary-background-faded-2);
-  border-radius: 10px;
+  border-radius: 12px;
   width: fit-content;
   min-width: 100%;
   margin: 1rem 0;
@@ -133,10 +174,20 @@ tbody td {
 }
 
 .subtitle-year {
-  display: block;
-  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.45rem;
+  font-family: "Geist Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: 0.025em;
   color: var(--color-primary-text-faded-1);
-  margin-top: 0.2rem;
+  margin-top: 0;
+  padding: 0.26rem 0.45rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 table .tags-mobile {
@@ -211,23 +262,22 @@ main,
 footer {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: min(100%, 940px);
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 section {
   width: 100%;
-  max-width: 800px;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 section.header {
-  margin: 2rem 0;
+  margin: 2rem 0 0;
 }
 
 table span.tag {
@@ -287,16 +337,20 @@ table span.tag.problem-solving {
 }
 
 footer {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 footer section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.5rem 2rem;
   width: 100%;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--color-border);
 }
 
 footer a.soft {
@@ -304,10 +358,69 @@ footer a.soft {
 }
 
 footer section p:first-of-type {
-  margin: 1.3rem 0 0.3rem 0;
+  margin: 0;
 }
 
 footer p {
   color: var(--color-primary-text-faded-1);
-  margin: 0.3rem 0;
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 751px) and (max-width: 1080px) {
+  body {
+    padding-right: 4.5rem;
+    padding-left: 1.75rem;
+  }
+
+  main,
+  footer,
+  section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    scroll-padding-top: calc(4rem + env(safe-area-inset-top));
+  }
+
+  body {
+    padding:
+      calc(4.5rem + env(safe-area-inset-top))
+      1rem
+      calc(6.4rem + env(safe-area-inset-bottom));
+  }
+
+  main,
+  footer,
+  section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  section.header {
+    margin-top: 0;
+  }
+
+  .subtitle-year {
+    font-size: 0.66rem;
+    padding: 0.23rem 0.4rem;
+  }
+
+  footer {
+    margin-top: 3.5rem;
+  }
+
+  footer section {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
 }

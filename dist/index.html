@@ -17,9 +17,19 @@
     <meta name="twitter:title" content="Nirav Parekh | Backend-Focused Software Engineer" />
     <meta name="twitter:description" content="Portfolio and backend project highlights of Nirav Parekh." />
     <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("nrv-portfolio-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch {
+        // Keep the default dark theme when storage is unavailable.
+      }
+    </script>
     <title>Nirav Parekh | Backend-Focused Software Engineer</title>
-    <script type="module" crossorigin src="/assets/index-z8ZPVjvm.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CmPR1ASV.css">
+    <script type="module" crossorigin src="/assets/index-DXA3Z5ra.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DcYAB_EX.css">
   </head>
   <body>
     <div id="root"></div>
