@@ -1,8 +1,8 @@
 /* ─────────────────────────────────────────────────────────────────────────────
    NIRAV PAREKH PORTFOLIO — index.css
    Aesthetic: Technical Broadsheet
-   Dark: deep slate + warm off-white + amber accent
-   Light: warm parchment + dark slate + amber
+   Dark: deep slate + warm off-white + green accent
+   Light: warm parchment + dark slate + green
 ───────────────────────────────────────────────────────────────────────────── */
 
 html { scroll-behavior: smooth; }
@@ -814,7 +814,7 @@ html { scroll-behavior: smooth; }
   letter-spacing: 0.025em;
 }
 
-/* Keep same amber style regardless of tag type */
+/* Keep same green style regardless of tag type */
 .project-tags .tag.fullstack,
 .project-tags .tag.problem-solving,
 .project-tags .tag.backend,

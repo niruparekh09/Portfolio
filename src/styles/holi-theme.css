@@ -1,6 +1,6 @@
 /*
  * Adapted from Holi Theme (MIT License, Ayush Saini)
- * Re-toned for amber/slate palette
+ * Re-toned for green/slate palette
  */
 
 p code {
@@ -64,7 +64,7 @@ pre[class*="language-"] {
 .token.doctype,
 .token.cdata   { color: #5a5440; }
 
-.token.punctuation { color: #e8a030; }
+.token.punctuation { color: #32e653; }
 
 .token.property,
 .token.tag,
@@ -87,7 +87,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #e8a030;
+  color: #32e653;
   background: transparent;
 }
 

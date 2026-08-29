@@ -21,7 +21,7 @@
   white-space: pre;
   font-size: clamp(6.2px, 0.54vw, 9.1px);
   margin: 0.3rem 0 0.5rem;
-  /* Amber gradient wash across the ASCII art */
+  /* Green gradient wash across the ASCII art */
   background: linear-gradient(
     105deg,
     var(--color-primary-text-faded-1) 0%,

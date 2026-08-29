@@ -1,8 +1,8 @@
 /*
  * Design tokens — Nirav Parekh portfolio
  * Palette: "Technical Broadsheet"
- * Dark: deep slate-charcoal + warm off-white + amber accent
- * Light: warm parchment + dark slate + amber accent
+ * Dark: deep slate-charcoal + warm off-white + green accent
+ * Light: warm parchment + dark slate + green accent
  */
 
 :root {
@@ -20,66 +20,66 @@
   --color-primary-background-faded-3: #262820;
   --color-primary-background-faded-4: #34362c;
 
-  /* Amber accent — distinctive from default green */
-  --color-accent-1:              #e8a030;
-  --color-accent-1-minimal:      rgba(232, 160, 48, 0.09);
-  --color-accent-dim:            rgba(232, 160, 48, 0.55);
+  /* Green accent — distinctive from default green */
+  --color-accent-1:              #32e653;
+  --color-accent-1-minimal:      rgba(50, 230, 83, 0.09);
+  --color-accent-dim:            rgba(50, 230, 83, 0.55);
 
   /* Page & components */
   --color-page-background:       #0e0f0d;
-  --color-row-even:              rgba(232, 160, 48, 0.028);
-  --color-pill-border:           rgba(232, 160, 48, 0.18);
-  --color-pill-background:       rgba(232, 160, 48, 0.05);
+  --color-row-even:              rgba(50, 230, 83, 0.028);
+  --color-pill-border:           rgba(50, 230, 83, 0.18);
+  --color-pill-background:       rgba(50, 230, 83, 0.05);
   --color-carousel-fade:         rgba(14, 15, 13, 0.96);
   --color-logo-shadow:           rgba(0, 0, 0, 0.55);
-  --color-leetcode-mark:         #e8a030;
-  --color-border:                rgba(232, 160, 48, 0.1);
-  --color-border-strong:         rgba(232, 160, 48, 0.2);
-  --color-border-accent:         rgba(232, 160, 48, 0.35);
-  --color-surface:               rgba(232, 160, 48, 0.03);
-  --color-surface-hover:         rgba(232, 160, 48, 0.07);
-  --color-accent-border:         rgba(232, 160, 48, 0.45);
+  --color-leetcode-mark:         #32e653;
+  --color-border:                rgba(50, 230, 83, 0.1);
+  --color-border-strong:         rgba(50, 230, 83, 0.2);
+  --color-border-accent:         rgba(50, 230, 83, 0.35);
+  --color-surface:               rgba(50, 230, 83, 0.03);
+  --color-surface-hover:         rgba(50, 230, 83, 0.07);
+  --color-accent-border:         rgba(50, 230, 83, 0.45);
   --shadow-control:              0 8px 28px rgba(0, 0, 0, 0.42), 0 2px 6px rgba(0,0,0,0.3);
 
   /* Editorial sidebar label color */
-  --color-section-label:         rgba(232, 160, 48, 0.22);
-  --color-rule:                  rgba(232, 160, 48, 0.18);
-  --color-rule-strong:           rgba(232, 160, 48, 0.32);
+  --color-section-label:         rgba(50, 230, 83, 0.22);
+  --color-rule:                  rgba(50, 230, 83, 0.18);
+  --color-rule-strong:           rgba(50, 230, 83, 0.32);
 }
 
 :root[data-theme="light"] {
   color-scheme: light;
 
-  --color-primary-text:          #1e1c18;
-  --color-primary-text-faded-1:  #6b6557;
-  --color-primary-text-faded-2:  #8c8473;
+  --color-primary-text:          #292a25;
+  --color-primary-text-faded-1:  #6c6d64;
+  --color-primary-text-faded-2:  #7e8076;
 
-  --color-primary-background:         #f5f0e6;
-  --color-primary-background-faded-1: #ede7d8;
-  --color-primary-background-faded-2: #e3dbc8;
-  --color-primary-background-faded-3: #d4c9b0;
-  --color-primary-background-faded-4: #bfb098;
+  --color-primary-background:         #f8f4e9;
+  --color-primary-background-faded-1: #f4eedf;
+  --color-primary-background-faded-2: #ece4d4;
+  --color-primary-background-faded-3: #ded3be;
+  --color-primary-background-faded-4: #c9bda8;
 
-  --color-accent-1:              #b87210;
-  --color-accent-1-minimal:      rgba(184, 114, 16, 0.1);
-  --color-accent-dim:            rgba(184, 114, 16, 0.5);
+  --color-accent-1:              #0a793b;
+  --color-accent-1-minimal:      rgba(10, 121, 59, 0.1);
+  --color-accent-dim:            rgba(10, 121, 59, 0.5);
 
-  --color-page-background:       #f8f3e8;
-  --color-row-even:              rgba(184, 114, 16, 0.045);
-  --color-pill-border:           rgba(100, 80, 40, 0.2);
-  --color-pill-background:       rgba(184, 114, 16, 0.06);
-  --color-carousel-fade:         rgba(248, 243, 232, 0.96);
-  --color-logo-shadow:           rgba(80, 60, 20, 0.15);
-  --color-leetcode-mark:         #b87210;
-  --color-border:                rgba(100, 80, 30, 0.16);
-  --color-border-strong:         rgba(100, 80, 30, 0.28);
-  --color-border-accent:         rgba(184, 114, 16, 0.28);
-  --color-surface:               rgba(184, 114, 16, 0.04);
-  --color-surface-hover:         rgba(184, 114, 16, 0.09);
-  --color-accent-border:         rgba(184, 114, 16, 0.42);
-  --shadow-control:              0 8px 24px rgba(80, 60, 20, 0.14), 0 2px 6px rgba(80,60,20,0.09);
+  --color-page-background:       #faf7ee;
+  --color-row-even:              rgba(10, 121, 59, 0.045);
+  --color-pill-border:           rgba(78, 70, 54, 0.2);
+  --color-pill-background:       rgba(10, 121, 59, 0.06);
+  --color-carousel-fade:         rgba(250, 247, 238, 0.96);
+  --color-logo-shadow:           rgba(87, 70, 38, 0.15);
+  --color-leetcode-mark:         #0a793b;
+  --color-border:                rgba(70, 61, 46, 0.16);
+  --color-border-strong:         rgba(70, 61, 46, 0.28);
+  --color-border-accent:         rgba(10, 121, 59, 0.28);
+  --color-surface:               rgba(10, 121, 59, 0.04);
+  --color-surface-hover:         rgba(10, 121, 59, 0.09);
+  --color-accent-border:         rgba(10, 121, 59, 0.42);
+  --shadow-control:              0 8px 24px rgba(87, 70, 38, 0.14), 0 2px 6px rgba(80,60,20,0.09);
 
-  --color-section-label:         rgba(184, 114, 16, 0.2);
-  --color-rule:                  rgba(100, 80, 30, 0.18);
-  --color-rule-strong:           rgba(100, 80, 30, 0.3);
+  --color-section-label:         rgba(10, 121, 59, 0.2);
+  --color-rule:                  rgba(70, 61, 46, 0.18);
+  --color-rule-strong:           rgba(70, 61, 46, 0.3);
 }

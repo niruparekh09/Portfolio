@@ -202,7 +202,7 @@ table span.tag {
 table span.tag.software     { background-color: #2a4aaa; border-color: #1e3880; }
 table span.tag.fullstack    { background-color: #5a2eb5; border-color: #3d1f80; }
 table span.tag.backend      { background-color: #1555b0; border-color: #103f85; }
-table span.tag.security     { color: #170b00; background-color: #e8a030; border-color: #c07820; }
+table span.tag.security     { color: #170b00; background-color: #32e653; border-color: #c07820; }
 table span.tag.ai           { color: #021008; background-color: #18d870; border-color: #12aa58; }
 table span.tag.architecture { background-color: #1e7878; border-color: #165858; }
 table span.tag.microservices{ background-color: #7a4a18; border-color: #5c3810; }
