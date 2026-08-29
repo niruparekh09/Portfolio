@@ -1145,7 +1145,7 @@ html {
   }
 }
 
-/* Topbar nav only on tablet/desktop */
+/* Topbar nav hidden on mobile — bottom nav handles wayfinding */
 @media (max-width: 750px) {
   .topbar-nav {
     display: none;
@@ -1153,322 +1153,679 @@ html {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   MOBILE BOTTOM NAV
+   A fixed 5-anchor strip at the bottom of the screen.
+   Opaque background, no blur. Active state uses the green accent underline.
+   Tap targets are 52px tall — well above the 44px minimum.
+───────────────────────────────────────────────────────────────────────────── */
+.mobile-bottom-nav {
+  display: none; /* shown only in mobile media query below */
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    RESPONSIVE: mobile (≤750px)
    Intentionally different — not a shrunk desktop.
+
+   Design decisions:
+   · Bottom nav replaces topbar nav for wayfinding
+   · Hero nameplate is a pure typographic moment — large, tight, confident
+   · Section spacing uses 4rem gaps — more room to breathe
+   · All content is full-width; no left-indent offsets on project items
+   · Tap targets ≥ 44px throughout
+   · Contact links are full-width rows, not a cramped bar
+   · Skills alternate row shading for scannability
+   · Signals strip shows a right-fade to hint scrollability
 ───────────────────────────────────────────────────────────────────────────── */
 @media (max-width: 750px) {
-  /* Topbar */
-  .site-topbar {
-    height: 2.8rem;
-    padding: 0 1.1rem;
-  }
-  .topbar-wordmark {
-    font-size: 0.65rem;
-    letter-spacing: 0.14em;
-  }
-  .topbar-clock {
-    display: none;
-  }
-  .theme-toggle {
-    width: 2rem;
-    height: 2rem;
-  }
-  .theme-toggle__icon {
-    width: 0.82rem;
-    height: 0.82rem;
+  /* ── Bottom nav ─────────────────────────────────────────────────────────── */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    height: calc(3.25rem + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    background: var(--color-primary-background);
+    border-top: 1px solid var(--color-border);
+    align-items: stretch;
   }
 
-  /* Sections */
+  .mobile-bottom-nav__link {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: var(--color-primary-text-faded-2);
+    font-family: "Geist Mono", monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+    transition: color 140ms ease;
+    /* 52px effective tap target */
+    min-height: 3.25rem;
+  }
+
+  .mobile-bottom-nav__link.is-active {
+    color: var(--color-accent-1);
+  }
+
+  /* Green underline on active — mirrors desktop topbar active style */
+  .mobile-bottom-nav__link.is-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: var(--color-accent-1);
+  }
+
+  .mobile-bottom-nav__link:hover {
+    color: var(--color-primary-text-faded-1);
+  }
+
+  /* Theme toggle sits at the right end of the bottom nav */
+  .mobile-bottom-nav__theme {
+    flex: 0 0 3.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--color-border);
+    color: var(--color-primary-text-faded-2);
+    background: transparent;
+    cursor: pointer;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 0;
+    transition: color 140ms ease;
+  }
+
+  .mobile-bottom-nav__theme:hover {
+    color: var(--color-accent-1);
+  }
+
+  .mobile-bottom-nav__theme svg {
+    width: 0.95rem;
+    height: 0.95rem;
+  }
+
+  /* ── Topbar simplified — just wordmark + (no clock, no theme toggle) ────── */
+  .site-topbar {
+    height: 2.75rem;
+    padding: 0 1.1rem;
+  }
+
+  /* Hide theme toggle from topbar on mobile — it moves to bottom nav */
+  .site-topbar .theme-toggle {
+    display: none;
+  }
+
+  .topbar-wordmark {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+  }
+
+  .topbar-clock {
+    font-size: 0.58rem;
+    /* Keep clock visible — it's useful context and fits on most phones */
+  }
+
+  /* ── Body bottom clearance for bottom nav ───────────────────────────────── */
+  /* global.css sets body padding; we override the bottom here */
+  body {
+    padding-bottom: calc(3.25rem + env(safe-area-inset-bottom) + 1.5rem);
+  }
+
+  /* ── Sections ───────────────────────────────────────────────────────────── */
   .portfolio-main > .section-panel:not(.hero-panel) {
-    margin-top: 3.5rem;
-    scroll-margin-top: 3rem;
+    margin-top: 4rem;
+    scroll-margin-top: 2.75rem;
   }
 
   .section-panel > h2 {
-    gap: 0.55rem;
-    font-size: clamp(1.4rem, 7.5vw, 1.7rem);
-    padding-bottom: 0.75rem;
-    letter-spacing: -0.024em;
+    gap: 0.6rem;
+    font-size: clamp(1.45rem, 7.5vw, 1.75rem);
+    letter-spacing: -0.026em;
+    line-height: 1.06;
+    padding-bottom: 0.85rem;
   }
 
+  /* Counter — slightly larger, easier to read at arm's length */
   .section-panel > h2::before {
-    font-size: 0.56rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
   }
 
-  /* Hero — mobile shows large name, no ASCII, no terminal */
+  /* ── Hero ───────────────────────────────────────────────────────────────── */
   .hero-panel {
-    padding-top: 0.25rem;
+    /* A little top breathing room after the topbar */
+    padding-top: 0.5rem;
   }
 
+  /* Dateline — single line, clean, reads like a byline */
   .hero-dateline {
-    font-size: 0.58rem;
-    letter-spacing: 0.05em;
-    flex-wrap: wrap;
-    gap: 0.1rem;
-    margin-bottom: 1.1rem;
+    flex-wrap: nowrap;
+    gap: 0;
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    margin-bottom: 1.5rem;
+    /* Prevent wrapping on very short text */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
   }
 
   .hero-dateline li + li::before {
-    padding: 0 0.35rem;
+    padding: 0 0.4rem;
   }
 
+  /* Hide desktop-only typed line and ASCII art */
   .terminal-prompt,
   .name-typed-line,
   .ascii-title {
     display: none;
   }
 
-  /* Large typographic nameplate on mobile — own design, not desktop fallback */
+  /* Mobile nameplate — typographic anchor, full weight */
   .mobile-nameplate {
     display: block;
     font-family: "General Sans", "Geist", Arial, Helvetica, sans-serif;
-    font-size: clamp(2.4rem, 12vw, 3rem);
-    font-weight: 740;
-    letter-spacing: -0.04em;
-    line-height: 0.96;
+    font-size: clamp(2.6rem, 13vw, 3.2rem);
+    font-weight: 750;
+    letter-spacing: -0.045em;
+    /* 1.0 line-height: tight stacking of first/last name */
+    line-height: 1;
     color: var(--color-primary-text);
-    margin: 0 0 1.2rem;
-    /* First name on one line, last name on second — word break at space */
-    word-break: keep-all;
+    margin: 0 0 1.5rem;
   }
 
-  /* Underline the last name with accent */
+  /* Last name — slightly lighter, creates a 2-line typographic mark */
   .mobile-nameplate span {
     display: block;
     color: var(--color-primary-text-faded-1);
-    font-weight: 680;
+    font-weight: 700;
+    /* Micro indent — aligns with the natural reading axis */
+    padding-left: 0.08em;
   }
 
+  /* Thin rule between name and intro — gives editorial separation */
+  .mobile-nameplate::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--color-accent-1);
+    opacity: 0.55;
+    margin-top: 1.2rem;
+  }
+
+  /* Intro copy — full width, comfortable reading size */
   .intro-copy {
     max-width: 100%;
-    margin-top: 0.25rem;
-  }
-  .intro-copy p {
-    font-size: 0.95rem;
-    line-height: 1.66;
-  }
-  .intro-copy p + p {
-    margin-top: 0.85rem;
-    font-size: 0.88rem;
+    /* No top margin — nameplate::after rule provides visual separation */
+    margin-top: 1.2rem;
   }
 
+  .intro-copy p {
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--color-primary-text);
+  }
+
+  .intro-copy p + p {
+    margin-top: 1rem;
+    /* Same size as primary — second paragraph earns equal weight on mobile */
+    font-size: 0.92rem;
+    line-height: 1.68;
+    color: var(--color-primary-text-faded-1);
+  }
+
+  /* Signals strip — scrollable, right-fade hints at overflow */
   .backend-signals {
-    margin-top: 1.2rem;
-    /* On mobile: scrollable strip */
+    margin-top: 1.5rem;
     flex-wrap: nowrap;
     overflow-x: auto;
-  }
-  .backend-signals li {
-    font-size: 0.58rem;
-    padding: 0.45rem 0.75rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Right fade: tells user there's more */
+    -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent 100%);
+    mask-image: linear-gradient(90deg, #000 70%, transparent 100%);
   }
 
-  /* Tech */
+  .backend-signals::-webkit-scrollbar {
+    display: none;
+  }
+
+  .backend-signals li {
+    font-size: 0.58rem;
+    letter-spacing: 0.07em;
+    padding: 0.55rem 0.85rem;
+    /* Larger tap-friendly height */
+    min-height: 2rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* ── Tech stack ─────────────────────────────────────────────────────────── */
+  .tech-stack-toolbar {
+    margin-top: 0.65rem;
+  }
+
   .tech-stack-toolbar p {
-    font-size: 0.8rem;
+    font-size: 0.86rem;
+    line-height: 1.6;
   }
+
   .tech-groups {
-    margin-top: 1rem;
+    margin-top: 1.1rem;
   }
+
   .tech-group {
     grid-template-columns: 1fr;
   }
+
   .tech-group__header {
-    padding: 0.6rem 0.8rem;
+    padding: 0.65rem 0.9rem;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
   }
+
   .tech-group__label {
-    font-size: 0.55rem;
-  }
-  .tech-group__count {
-    padding-left: 0;
-    font-size: 0.5rem;
-  }
-  .tech-carousel-track {
-    min-height: 4.2rem;
-  }
-  .tech-logo-item {
-    padding: 0.65rem 0.85rem;
-    gap: 0.42rem;
-  }
-  .tech-logo {
-    width: 1.1rem;
-    height: 1.1rem;
-  }
-  .tech-logo-name {
-    font-size: 0.6rem;
+    font-size: 0.56rem;
   }
 
-  /* Experience */
+  .tech-group__count {
+    padding-left: 0;
+    font-size: 0.52rem;
+    flex-shrink: 0;
+  }
+
+  .tech-carousel-track {
+    min-height: 4.4rem;
+  }
+
+  .tech-logo-item {
+    padding: 0.7rem 0.9rem;
+    gap: 0.45rem;
+  }
+
+  .tech-logo {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .tech-logo-name {
+    font-size: 0.62rem;
+  }
+
+  /* ── Experience ─────────────────────────────────────────────────────────── */
   .job-history-section .job-timeline {
-    margin-top: 1.2rem;
+    margin-top: 1.4rem;
   }
 
   .job-employer {
-    padding: 1.2rem 0 1.5rem;
+    /* More padding — entries feel less squeezed */
+    padding: 1.4rem 0 1.6rem;
   }
+
+  /* Suppress the left margin marker — no room in 1.1rem gutter */
   .job-employer::before {
-    left: -0.5rem;
-    top: 1.55rem;
-    width: 4px;
-    height: 4px;
+    display: none;
   }
 
   .job-employer__header {
-    display: block;
-    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.9rem;
   }
+
   .job-employer__name {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
+
   .job-employer__location {
-    display: block;
-    margin-top: 0.2rem;
-    font-size: 0.58rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
     white-space: normal;
+    color: var(--color-primary-text-faded-2);
+  }
+
+  /* Positions: block layout, clear hierarchy */
+  .job-employer__positions {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
   .job-position {
     display: block;
-    padding-bottom: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px dashed var(--color-rule-strong);
   }
+
+  .job-employer__positions .job-position:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Title + dates on the same row — saves vertical space */
+  .job-position__header-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
   .job-position__title {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
+    font-weight: 620;
+    line-height: 1.3;
+    flex: 1;
+    min-width: 0;
   }
+
   .job-position__dates {
-    margin-top: 0.25rem;
+    margin: 0;
+    flex-shrink: 0;
   }
 
-  .job-position__highlights,
-  .project-highlights {
-    margin-top: 0.55rem;
-    padding-left: 0.9rem;
-    font-size: 0.82rem;
-    line-height: 1.62;
+  .job-position__dates .subtitle-year {
+    font-size: 0.6rem;
+    color: var(--color-primary-text-faded-2);
   }
 
-  .job-position__highlights li,
-  .project-highlights li {
-    margin-bottom: 0.4rem;
-    overflow-wrap: anywhere;
+  /* Highlights — full reading size, not cramped */
+  .job-position__highlights {
+    margin: 0.65rem 0 0;
+    padding-left: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--color-primary-text-faded-1);
   }
 
-  /* Projects */
+  .job-position__highlights li {
+    margin-bottom: 0.45rem;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  .job-position__highlights li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── Projects ───────────────────────────────────────────────────────────── */
   .project-item {
-    padding: 1.1rem 0 1.3rem;
-  }
-  .project-item::before {
-    left: -0.4rem;
-    top: 1.4rem;
-    width: 4px;
-    height: 4px;
+    padding: 1.25rem 0 1.4rem;
   }
 
+  /* Suppress left-margin square — no room */
+  .project-item::before {
+    display: none;
+  }
+
+  /* Header: index + title inline, date drops below */
   .project-item__header {
-    grid-template-columns: 1.6rem minmax(0, 1fr) auto;
-    gap: 0.45rem;
+    display: grid;
+    /* index / title on one row, year floats right */
+    grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.3rem 0.5rem;
+    margin-bottom: 0.65rem;
   }
 
   .project-item__index {
-    font-size: 0.55rem;
-  }
-  .project-item__title {
-    font-size: 0.96rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+    padding-top: 0.1em;
   }
 
+  .project-item__title {
+    font-size: 1rem;
+    font-weight: 640;
+    letter-spacing: -0.018em;
+    line-height: 1.25;
+  }
+
+  /* On mobile the arrow after the link adds clutter — remove it */
   .project-item__title a::after {
     display: none;
   }
 
+  /* Year chip sits at the right of the title row */
+  .project-item__header .subtitle-year {
+    font-size: 0.58rem;
+    align-self: start;
+    padding-top: 0.12em;
+  }
+
+  /* Description — full width, no left offset */
   .project-description {
     max-width: 100%;
-    margin-left: 2.05rem;
-    font-size: 0.84rem;
-    line-height: 1.64;
-    overflow-wrap: anywhere;
+    margin-left: 0;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--color-primary-text-faded-1);
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
+  /* Highlights — full width, no left offset */
   .project-item .project-highlights {
-    margin-left: 2.05rem;
-    font-size: 0.82rem;
+    margin: 0.65rem 0 0;
+    margin-left: 0;
+    padding-left: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
   }
 
+  .project-highlights li {
+    margin-bottom: 0.45rem;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .project-highlights li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Tags — full width, generous tap targets */
   .project-tags {
-    gap: 0.25rem;
-    margin: 0.65rem 0 0 2.05rem;
+    gap: 0.3rem;
+    margin: 0.75rem 0 0;
+    margin-left: 0;
   }
 
+  /* All tag variants: unified neutral pill, min-height for touch */
   .project-tags .tag,
   .project-tags .tag.fullstack,
+  .project-tags .tag.problem-solving,
   .project-tags .tag.backend,
   .project-tags .tag.api,
   .project-tags .tag.security,
   .project-tags .tag.ai,
   .project-tags .tag.architecture,
-  .project-tags .tag.microservices {
-    font-size: 0.56rem;
-    padding: 0.14rem 0.34rem;
+  .project-tags .tag.microservices,
+  :root[data-theme="light"] .project-tags .tag,
+  :root[data-theme="light"] .project-tags .tag.fullstack,
+  :root[data-theme="light"] .project-tags .tag.problem-solving,
+  :root[data-theme="light"] .project-tags .tag.backend,
+  :root[data-theme="light"] .project-tags .tag.api,
+  :root[data-theme="light"] .project-tags .tag.security,
+  :root[data-theme="light"] .project-tags .tag.ai,
+  :root[data-theme="light"] .project-tags .tag.architecture,
+  :root[data-theme="light"] .project-tags .tag.microservices {
+    min-height: 1.6rem;
+    padding: 0.22rem 0.5rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+    color: var(--color-primary-text-faded-2);
+    border-color: var(--color-border);
+    background: transparent;
   }
 
-  /* Skills — switch to prose list on mobile */
+  /* ── Skills ─────────────────────────────────────────────────────────────── */
   #skills .skills-matrix {
-    margin-top: 1.1rem;
+    margin-top: 1.2rem;
   }
 
   #skills .skill-row {
+    /* Single column — category label on top, items below */
     grid-template-columns: 1fr;
-    gap: 0.3rem;
-    padding: 0.75rem 0;
+    gap: 0.45rem;
+    padding: 0.9rem 0.75rem;
+    border-top: 1px solid var(--color-border);
+    /* Alternating row tint for scannability — applied via nth-child */
+    background: transparent;
+  }
+
+  /* Subtle alternating row shading — easier to scan on long mobile lists */
+  #skills .skill-row:nth-child(even) {
+    background: var(--color-row-even);
+  }
+
+  #skills .skill-row:last-child {
+    border-bottom: 1px solid var(--color-border);
   }
 
   #skills .skill-row__category {
-    font-size: 0.58rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    color: var(--color-primary-text-faded-2);
+    line-height: 1.3;
+  }
+
+  /* Pills: inline prose with slash separators — readable, not a tag cloud */
+  #skills .skill-row__items {
+    gap: 0 0.1rem;
+    flex-wrap: wrap;
   }
 
   #skills .skill-pill {
-    font-size: 0.82rem;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: var(--color-primary-text-faded-1);
   }
 
-  /* Links */
+  /* ── Links ──────────────────────────────────────────────────────────────── */
   #links .links-list {
-    margin-top: 1.1rem;
-  }
-  #links .link-entry {
-    font-size: 0.84rem;
-    gap: 0.4rem 0.6rem;
-    padding: 0.65rem 0;
-  }
-  #links .link-entry__num {
-    font-size: 0.54rem;
-  }
-  #links .link-entry__domain {
-    font-size: 0.58rem;
+    margin-top: 1.2rem;
   }
 
-  /* Contact bar */
-  .contact-bar {
-    gap: 0;
+  /* Each link entry: full-width row, 52px min tap target */
+  #links .link-entry {
+    /* Simplify to 2-column: label | domain */
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 0.6rem;
+    padding: 0.85rem 0;
+    font-size: 0.9rem;
+    min-height: 3.25rem;
+    align-items: center;
   }
-  .contact-bar__label {
+
+  /* Hide the index number — domain already distinguishes entries */
+  #links .link-entry__num {
     display: none;
   }
-  .contact-bar a {
+
+  #links .link-entry__label {
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  #links .link-entry__domain {
+    font-size: 0.58rem;
+    /* Truncate long domains gracefully */
+    max-width: 42vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--color-primary-text-faded-2);
+  }
+
+  /* ── Contact section — full-width rows, not a cramped bar ──────────────── */
+  .contact-bar {
+    margin-top: 1.75rem;
+    padding-top: 0;
+    border-top: none;
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  /* Label becomes a small header above the contact rows */
+  .contact-bar__label {
+    display: block;
     font-size: 0.6rem;
-    padding: 0.22rem 0.55rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary-text-faded-2);
+    padding: 0 0 0.6rem;
+    border-right: none;
+    border-bottom: 1px solid var(--color-rule-strong);
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  /* Each contact link: full-width row, proper tap target */
+  .contact-bar a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.85rem 0;
+    font-size: 0.84rem;
+    color: var(--color-primary-text-faded-1);
+    border-right: none;
+    border-top: 1px solid var(--color-border);
+    letter-spacing: 0.02em;
+    min-height: 3.25rem;
+    box-sizing: border-box;
+  }
+
+  .contact-bar a:first-of-type {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  .contact-bar a:last-child {
+    border-right: none;
   }
 }
 
-/* ── Very small ──────────────────────────────────────────────────────────── */
+/* ── Very small (≤360px) ─────────────────────────────────────────────────── */
 @media (max-width: 360px) {
   .mobile-nameplate {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
+    letter-spacing: -0.04em;
   }
+
   .section-panel > h2 {
-    font-size: 1.35rem;
+    font-size: 1.38rem;
+  }
+
+  #links .link-entry__domain {
+    display: none;
+  }
+
+  .contact-bar a {
+    font-size: 0.78rem;
   }
 }
 

@@ -170,6 +170,66 @@ function IstClock() {
   return <span className="topbar-clock">{t} IST</span>;
 }
 
+/* ── Mobile Bottom Nav ────────────────────────────────────────────────────── */
+function MobileBottomNav({ activeSection, theme, onToggleTheme }) {
+  const isLight = theme === "light";
+  const navItems = [
+    { href: "#tech-stack", id: "tech-stack", label: "Stack" },
+    { href: "#job-history-section", id: "job-history-section", label: "Exp" },
+    { href: "#projects", id: "projects", label: "Work" },
+    { href: "#skills", id: "skills", label: "Skills" },
+    { href: "#links", id: "links", label: "Links" },
+  ];
+
+  return (
+    <nav className="mobile-bottom-nav" aria-label="Page sections">
+      {navItems.map(({ href, id, label }) => (
+        <a
+          key={id}
+          href={href}
+          className={`mobile-bottom-nav__link${activeSection === id ? " is-active" : ""}`}
+          aria-current={activeSection === id ? "location" : undefined}
+        >
+          {label}
+        </a>
+      ))}
+      <button
+        type="button"
+        className="mobile-bottom-nav__theme"
+        onClick={onToggleTheme}
+        aria-label={isLight ? "Switch to dark" : "Switch to light"}
+        title={isLight ? "Switch to dark" : "Switch to light"}
+      >
+        {isLight ? (
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7.3 7.3 0 0 0 9.8 9.8Z" />
+          </svg>
+        ) : (
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.8v2.3M12 18.9v2.3M21.2 12h-2.3M5.1 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2 5.5 5.5" />
+          </svg>
+        )}
+      </button>
+    </nav>
+  );
+}
+
 /* ── App ──────────────────────────────────────────────────────────────────── */
 function App() {
   const typedNameRef = useRef(null);
@@ -471,12 +531,14 @@ function App() {
                       className="job-position"
                       key={`${employer.company}-${pos.title}-${pos.yearStart}`}
                     >
-                      <h4 className="job-position__title">{pos.title}</h4>
-                      <p className="job-position__dates">
-                        <span className="subtitle-year">
-                          {pos.dateLabel || `${pos.yearStart}–${pos.yearEnd}`}
-                        </span>
-                      </p>
+                      <div className="job-position__header-row">
+                        <h4 className="job-position__title">{pos.title}</h4>
+                        <p className="job-position__dates">
+                          <span className="subtitle-year">
+                            {pos.dateLabel || `${pos.yearStart}–${pos.yearEnd}`}
+                          </span>
+                        </p>
+                      </div>
                       <ul className="job-position__highlights">
                         {pos.highlights.map((h) => (
                           <li key={h.slice(0, 36)}>{h}</li>
@@ -608,6 +670,15 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* ── Mobile bottom nav ────────────────────────────────────────────── */}
+      <MobileBottomNav
+        activeSection={activeSection}
+        theme={theme}
+        onToggleTheme={() =>
+          setTheme((t) => (t === DARK_THEME ? LIGHT_THEME : DARK_THEME))
+        }
+      />
 
       {/* ── Footer ──────────────────────────────────────────────────────── */}
       <footer>
