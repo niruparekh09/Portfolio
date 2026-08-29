@@ -541,7 +541,12 @@ function App() {
             aria-label="Technical skills by category"
           >
             {skillGroups.map((skill) => {
-              const items = skill.stack.split(",").map((s) => s.trim());
+              const items = Array.isArray(skill.skills)
+                ? skill.skills
+                : String(skill.stack || "")
+                    .split(",")
+                    .map((s) => s.trim())
+                    .filter(Boolean);
               return (
                 <article
                   className="skill-row"
