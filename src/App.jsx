@@ -11,10 +11,7 @@ $$ $$\\$$ |$$ |$$  __$$\\ \\____$$\\\\$$\\  $$  |      $$$$$$$  |\\____$$\\ $$  
 $$ \\$$$$ |$$ |$$ |  \\__|$$$$$$$ |\\$$\\$$  /       $$  ____/ $$$$$$$ |$$ |  \\__|$$$$$$$$ |$$$$$$  / $$ |  $$ |
 $$ |\\$$$ |$$ |$$ |     $$  __$$ | \\$$$  /        $$ |     $$  __$$ |$$ |      $$   ____|$$  _$$<  $$ |  $$ |
 $$ | \\$$ |$$ |$$ |     \\$$$$$$$ |  \\$  /         $$ |     \\$$$$$$$ |$$ |      \\$$$$$$$\\ $$ | \\$$\\ $$ |  $$ |
-\\__|  \\__|\\__|\\__|      \\_______|   \\_/          \\__|      \\_______|\\__|       \\_______|\\__|  \\__|\\__|  \\__|
-                                                                                                            
-                                                                                                            
-                                                                                                            `;
+\\__|  \\__|\\__|\\__|      \\_______|   \\_/          \\__|      \\_______|\\__|       \\_______|\\__|  \\__|\\__|  \\__|`;
 
 const asciiTitleSmall = ` _   _ _                         
 | \\ | (_)_ __ __ ___   __        
@@ -25,7 +22,7 @@ const asciiTitleSmall = ` _   _ _
 const displayName = "Nirav Parekh";
 
 const introLines = [
-  "Backend-focused Full Stack Engineer specializing in enterprise applications, secure APIs, and systems built for the long run. I care about what happens in real applications - how the system handles real traffic, how the codebase survives changing requirements, how the next engineer can actually understand what I built.",
+  "Backend-focused Full Stack Engineer specializing in enterprise applications, secure APIs, and systems built for the long run. I care about what happens in real applications — how the system handles real traffic, how the codebase survives changing requirements, how the next engineer can actually understand what I built.",
   "System design is where I think best. Hard problems are what keep me engaged. Continuous learning is how I stay sharp. End-to-end ownership is just how I work."
 ];
 
@@ -33,120 +30,102 @@ const techStackGroups = [
   {
     label: "Backend, data & security",
     logos: [
-      { name: "Java", src: "/assets/images/tech-stack/java.png" },
-      { name: "Spring Boot", src: "/assets/images/tech-stack/spring_boot.png" },
-      { name: "Spring Security", src: "/assets/images/tech-stack/spring.png" },
-      { name: "Spring AI", src: "/assets/images/tech-stack/ai_llm.png" },
-      { name: "Hibernate", src: "/assets/images/tech-stack/hibernate.png" },
-      { name: "JUnit", src: "/assets/images/tech-stack/junit.png" },
-      { name: "Mockito", src: "/assets/images/tech-stack/mockito.png" },
-      { name: "OAuth2 / OIDC", src: "/assets/images/tech-stack/auth0.png" },
-      { name: "Security (JWT, RBAC, mTLS)", src: "/assets/images/tech-stack/vault.png" },
-      { name: "MySQL", src: "/assets/images/tech-stack/mysql.png" },
-      { name: "PostgreSQL", src: "/assets/images/tech-stack/postgresql.png" },
-      { name: "MongoDB", src: "/assets/images/tech-stack/mongodb.png" },
-      { name: "Kafka", src: "/assets/images/tech-stack/kafka.png" }
+      { name: "Java",                           src: "/assets/images/tech-stack/java.png" },
+      { name: "Spring Boot",                    src: "/assets/images/tech-stack/spring_boot.png" },
+      { name: "Spring Security",                src: "/assets/images/tech-stack/spring.png" },
+      { name: "Spring AI",                      src: "/assets/images/tech-stack/ai_llm.png" },
+      { name: "Hibernate",                      src: "/assets/images/tech-stack/hibernate.png" },
+      { name: "JUnit",                          src: "/assets/images/tech-stack/junit.png" },
+      { name: "Mockito",                        src: "/assets/images/tech-stack/mockito.png" },
+      { name: "OAuth2 / OIDC",                  src: "/assets/images/tech-stack/auth0.png" },
+      { name: "Security (JWT, RBAC, mTLS)",     src: "/assets/images/tech-stack/vault.png" },
+      { name: "MySQL",                          src: "/assets/images/tech-stack/mysql.png" },
+      { name: "PostgreSQL",                     src: "/assets/images/tech-stack/postgresql.png" },
+      { name: "MongoDB",                        src: "/assets/images/tech-stack/mongodb.png" },
+      { name: "Kafka",                          src: "/assets/images/tech-stack/kafka.png" }
     ]
   },
   {
     label: "Platform, delivery & product",
     logos: [
-      { name: "REST API Design", src: "/assets/images/tech-stack/rest.png" },
-      { name: "Maven", src: "/assets/images/tech-stack/maven.png" },
-      { name: "Docker", src: "/assets/images/tech-stack/docker.png" },
-      { name: "CI/CD", src: "/assets/images/tech-stack/ci_cd.png" },
-      { name: "GitHub Actions", src: "/assets/images/tech-stack/github.png" },
-      { name: "Git", src: "/assets/images/tech-stack/git.png" },
-      { name: "AI/LLM Integration", src: "/assets/images/tech-stack/ai_llm.png" },
-      { name: "JavaScript", src: "/assets/images/tech-stack/javascript.png" },
-      { name: "TypeScript", src: "/assets/images/tech-stack/typescript.png" },
-      { name: "React", src: "/assets/images/tech-stack/react.png" },
-      { name: "Next.js", src: "/assets/images/tech-stack/next_js.png" },
-      { name: "Tailwind CSS", src: "/assets/images/tech-stack/tailwind_css.png" },
-      { name: "Redux", src: "/assets/images/tech-stack/redux.png" }
+      { name: "REST API Design",   src: "/assets/images/tech-stack/rest.png" },
+      { name: "Maven",             src: "/assets/images/tech-stack/maven.png" },
+      { name: "Docker",            src: "/assets/images/tech-stack/docker.png" },
+      { name: "CI/CD",             src: "/assets/images/tech-stack/ci_cd.png" },
+      { name: "GitHub Actions",    src: "/assets/images/tech-stack/github.png" },
+      { name: "Git",               src: "/assets/images/tech-stack/git.png" },
+      { name: "AI/LLM Integration",src: "/assets/images/tech-stack/ai_llm.png" },
+      { name: "JavaScript",        src: "/assets/images/tech-stack/javascript.png" },
+      { name: "TypeScript",        src: "/assets/images/tech-stack/typescript.png" },
+      { name: "React",             src: "/assets/images/tech-stack/react.png" },
+      { name: "Next.js",           src: "/assets/images/tech-stack/next_js.png" },
+      { name: "Tailwind CSS",      src: "/assets/images/tech-stack/tailwind_css.png" },
+      { name: "Redux",             src: "/assets/images/tech-stack/redux.png" }
     ]
   }
 ];
 
 const socialLinks = {
-  github: "https://github.com/niruparekh09",
+  github:   "https://github.com/niruparekh09",
   leetcode: "https://leetcode.com/u/niruparekh09/",
   linkedin: "https://www.linkedin.com/in/niravparekh090"
 };
 
 const contactInfo = {
   phoneDisplay: "+91-7746000398",
-  phoneHref: "tel:+917746000398",
-  email: "niruparekh09@gmail.com",
-  resumeHref: "/Nirav_Parekh_Resume.pdf"
+  phoneHref:    "tel:+917746000398",
+  email:        "niruparekh09@gmail.com",
+  resumeHref:   "/Nirav_Parekh_Resume.pdf"
 };
 
 const profileLinks = [
   {
-    id: "linkedin",
-    label: "LinkedIn",
+    id: "linkedin",    label: "LinkedIn",
     href: socialLinks.linkedin,
     icon: "/assets/images/icons/linkedin.svg",
     openInNewTab: true
   },
   {
-    id: "github",
-    label: "GitHub",
+    id: "github",      label: "GitHub",
     href: socialLinks.github,
     icon: "/assets/images/icons/github.svg",
     openInNewTab: true
   },
   {
-    id: "leetcode",
-    label: "LeetCode",
+    id: "leetcode",    label: "LeetCode",
     href: socialLinks.leetcode,
     icon: "/assets/images/icons/leetcode.svg",
     openInNewTab: true
   },
   {
-    id: "email",
-    label: "Email",
+    id: "email",       label: "Email",
     href: `mailto:${contactInfo.email}`,
     icon: "/assets/images/icons/email.svg"
   },
   {
-    id: "resume",
-    label: "Resume (PDF)",
+    id: "resume",      label: "Resume (PDF)",
     href: contactInfo.resumeHref,
     icon: "/assets/images/icons/resume.svg",
     openInNewTab: true
   },
   {
-    id: "home",
-    label: "Home",
+    id: "home",        label: "Home",
     href: "#top",
     icon: "/assets/images/icons/home.svg"
   }
 ];
 
+/* ── Icon renderer ─────────────────────────────────────────────────────────── */
 function renderProfileIcon(linkId, iconPath) {
   if (linkId === "email") {
     return (
       <span className="link-tile__icon link-tile__icon--email" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="presentation">
-          <rect
-            x="3.2"
-            y="5.3"
-            width="17.6"
-            height="13.4"
-            rx="2"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-          />
-          <path
-            d="M4.5 7.2 12 13l7.5-5.8"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+          <rect x="3.2" y="5.3" width="17.6" height="13.4" rx="2"
+            fill="none" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M4.5 7.2 12 13l7.5-5.8"
+            fill="none" stroke="currentColor" strokeWidth="1.7"
+            strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </span>
     );
@@ -156,27 +135,12 @@ function renderProfileIcon(linkId, iconPath) {
     return (
       <span className="link-tile__icon link-tile__icon--resume" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="presentation">
-          <path
-            d="M7 3.5h7.5L19 8v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M14.5 3.5V8H19"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M9 12.2h6M9 15.4h6M9 18.2h4.5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.7"
-            strokeLinecap="round"
-          />
+          <path d="M7 3.5h7.5L19 8v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1Z"
+            fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          <path d="M14.5 3.5V8H19"
+            fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          <path d="M9 12.2h6M9 15.4h6M9 18.2h4.5"
+            fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
         </svg>
       </span>
     );
@@ -186,14 +150,24 @@ function renderProfileIcon(linkId, iconPath) {
     return (
       <span className="link-tile__icon link-tile__icon--leetcode" aria-hidden="true">
         <svg viewBox="0 0 24 24" role="presentation">
-          <path
-            d="m9 7-5 5 5 5M15 7l5 5-5 5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.9"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+          <path d="m9 7-5 5 5 5M15 7l5 5-5 5"
+            fill="none" stroke="currentColor" strokeWidth="1.9"
+            strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </span>
+    );
+  }
+
+  if (linkId === "home") {
+    return (
+      <span className="link-tile__icon link-tile__icon--home" aria-hidden="true">
+        <svg viewBox="0 0 24 24" role="presentation">
+          <path d="M3 12L12 3l9 9"
+            fill="none" stroke="currentColor" strokeWidth="1.7"
+            strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M5 10v9a1 1 0 0 0 1 1h4v-5h4v5h4a1 1 0 0 0 1-1v-9"
+            fill="none" stroke="currentColor" strokeWidth="1.7"
+            strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </span>
     );
@@ -210,31 +184,22 @@ function renderProfileIcon(linkId, iconPath) {
   );
 }
 
+/* ── Constants ─────────────────────────────────────────────────────────────── */
 const THEME_STORAGE_KEY = "nrv-portfolio-theme";
-const DARK_THEME = "dark";
+const DARK_THEME  = "dark";
 const LIGHT_THEME = "light";
+
 const IST_CLOCK_FORMATTER = new Intl.DateTimeFormat("en-IN", {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-  hour12: true,
-  timeZone: "Asia/Kolkata"
+  hour: "2-digit", minute: "2-digit", second: "2-digit",
+  hour12: true, timeZone: "Asia/Kolkata"
 });
 
 function getInitialTheme() {
-  if (typeof window === "undefined") {
-    return DARK_THEME;
-  }
-
+  if (typeof window === "undefined") return DARK_THEME;
   try {
-    const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-    if (savedTheme === DARK_THEME || savedTheme === LIGHT_THEME) {
-      return savedTheme;
-    }
-  } catch {
-    return DARK_THEME;
-  }
-
+    const saved = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (saved === DARK_THEME || saved === LIGHT_THEME) return saved;
+  } catch { /* ignore */ }
   return DARK_THEME;
 }
 
@@ -242,48 +207,39 @@ function getIstClockText() {
   return `${IST_CLOCK_FORMATTER.format(new Date())} IST`;
 }
 
+/* ── IST Clock ─────────────────────────────────────────────────────────────── */
 function IstClock() {
   const [clockText, setClockText] = useState(getIstClockText);
 
   useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setClockText(getIstClockText());
-    }, 1000);
-
-    return () => {
-      window.clearInterval(intervalId);
-    };
+    const id = window.setInterval(() => setClockText(getIstClockText()), 1000);
+    return () => window.clearInterval(id);
   }, []);
 
   return <span className="nrv-chip__clock">{clockText}</span>;
 }
 
+/* ── App ───────────────────────────────────────────────────────────────────── */
 function App() {
-  const typedNameRef = useRef(null);
-  const [theme, setTheme] = useState(getInitialTheme);
+  const typedNameRef  = useRef(null);
+  const [theme, setTheme]               = useState(getInitialTheme);
   const [activeSection, setActiveSection] = useState("");
   const [isPageScrolled, setIsPageScrolled] = useState(false);
 
+  /* Persist + apply theme */
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-
-    try {
-      window.localStorage.setItem(THEME_STORAGE_KEY, theme);
-    } catch {
-      // Ignore storage errors and continue with in-memory theme state.
-    }
+    try { window.localStorage.setItem(THEME_STORAGE_KEY, theme); }
+    catch { /* ignore */ }
   }, [theme]);
 
+  /* Typed.js animation */
   useEffect(() => {
-    if (!typedNameRef.current) {
-      return undefined;
-    }
-
+    if (!typedNameRef.current) return undefined;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       typedNameRef.current.textContent = displayName;
       return undefined;
     }
-
     const typed = new Typed(typedNameRef.current, {
       strings: [
         "Nirav Parekh",
@@ -300,63 +256,47 @@ function App() {
       showCursor: true,
       cursorChar: "_"
     });
-
-    return () => {
-      typed.destroy();
-    };
+    return () => typed.destroy();
   }, []);
 
+  /* Active section tracking */
   useEffect(() => {
     const sectionIds = ["tech-stack", "job-history-section", "projects"];
-    const sections = sectionIds
-      .map((sectionId) => document.getElementById(sectionId))
-      .filter(Boolean);
+    const sections   = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
-    const updateActiveSection = () => {
+    const update = () => {
       const readingLine = window.scrollY + window.innerHeight * 0.34;
-      let nextActiveSection = "";
-
-      sections.forEach((section) => {
-        if (section.offsetTop <= readingLine) {
-          nextActiveSection = section.id;
-        }
-      });
-
-      setActiveSection(nextActiveSection);
+      let next = "";
+      sections.forEach(s => { if (s.offsetTop <= readingLine) next = s.id; });
+      setActiveSection(next);
     };
 
-    updateActiveSection();
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
-    window.addEventListener("resize", updateActiveSection);
-
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
     return () => {
-      window.removeEventListener("scroll", updateActiveSection);
-      window.removeEventListener("resize", updateActiveSection);
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
     };
   }, []);
 
+  /* Scroll state for floating chrome */
   useEffect(() => {
-    const updateScrollState = () => {
-      setIsPageScrolled(window.scrollY > 72);
-    };
-
-    updateScrollState();
-    window.addEventListener("scroll", updateScrollState, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", updateScrollState);
-    };
+    const update = () => setIsPageScrolled(window.scrollY > 72);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
   }, []);
 
-  const isLightTheme = theme === LIGHT_THEME;
+  const isLightTheme     = theme === LIGHT_THEME;
   const themeToggleLabel = isLightTheme ? "Switch to Dark" : "Switch to Light";
 
   return (
     <>
-      <a className="skip-link" href="#main-content">
-        Skip to content
-      </a>
+      {/* ── Skip link ─────────────────────────────────────────────────────── */}
+      <a className="skip-link" href="#main-content">Skip to content</a>
 
+      {/* ── Brand chip (top-left) ─────────────────────────────────────────── */}
       <div
         className={`floating-brand-left ${isPageScrolled ? "is-scrolled" : ""}`}
         aria-label="Brand and time"
@@ -367,6 +307,7 @@ function App() {
         </div>
       </div>
 
+      {/* ── Theme toggle (top-right) ──────────────────────────────────────── */}
       <div
         className={`floating-top-right ${isPageScrolled ? "is-scrolled" : ""}`}
         aria-label="Theme controls"
@@ -374,62 +315,65 @@ function App() {
         <button
           type="button"
           className="theme-toggle"
-          onClick={() => setTheme((currentTheme) => (currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME))}
+          onClick={() => setTheme(t => t === DARK_THEME ? LIGHT_THEME : DARK_THEME)}
           aria-label={themeToggleLabel}
           title={themeToggleLabel}
         >
           <span className="theme-toggle__icon" aria-hidden="true">
             {isLightTheme ? (
+              /* Moon icon */
               <svg viewBox="0 0 24 24" role="presentation">
-                <path
-                  d="M21 12.8A9 9 0 1 1 11.2 3a7.3 7.3 0 0 0 9.8 9.8Z"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7.3 7.3 0 0 0 9.8 9.8Z"
+                  fill="none" stroke="currentColor" strokeWidth="1.8"
+                  strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             ) : (
+              /* Sun icon */
               <svg viewBox="0 0 24 24" role="presentation">
                 <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                <path
-                  d="M12 2.8v2.3M12 18.9v2.3M21.2 12h-2.3M5.1 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2 5.5 5.5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                />
+                <path d="M12 2.8v2.3M12 18.9v2.3M21.2 12h-2.3M5.1 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2 5.5 5.5"
+                  fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
               </svg>
             )}
           </span>
         </button>
       </div>
 
+      {/* ── Main content ──────────────────────────────────────────────────── */}
       <main id="main-content" className="portfolio-main">
+
+        {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section id="top" className="header section-panel hero-panel">
           <h1 className="sr-only">{displayName}</h1>
+
+          {/* Terminal prompt line */}
           <p className="terminal-prompt" aria-hidden="true">
-            nirav@backend:~$ whoami
+            nirav@backend:~$&nbsp;<span style={{ color: "var(--color-primary-text-faded-1)" }}>whoami</span>
           </p>
+
+          {/* Typed name line */}
           <p className="name-typed-line" aria-hidden="true">
-            <span className="name-typed-prefix">echo</span>
+            <span className="name-typed-prefix">→</span>
             <span className="name-typed-value" ref={typedNameRef} />
           </p>
+
+          {/* Mobile fallback nameplate */}
           <p className="mobile-nameplate">{displayName}</p>
+
+          {/* ASCII title */}
           <div className="ascii-title">
-            <pre className="ascii-art large" aria-hidden="true">
-              {asciiTitleLarge}
-            </pre>
-            <pre className="ascii-art small" aria-hidden="true">
-              {asciiTitleSmall}
-            </pre>
+            <pre className="ascii-art large" aria-hidden="true">{asciiTitleLarge}</pre>
+            <pre className="ascii-art small" aria-hidden="true">{asciiTitleSmall}</pre>
           </div>
+
+          {/* Intro paragraphs */}
           <div className="intro-copy">
-            {introLines.map((line) => (
+            {introLines.map(line => (
               <p key={line}>{line}</p>
             ))}
           </div>
+
+          {/* Keyword signal row */}
           <ul className="backend-signals" aria-label="Engineering focus">
             <li>Java</li>
             <li>Spring Boot</li>
@@ -440,6 +384,7 @@ function App() {
           </ul>
         </section>
 
+        {/* ── Tech Stack ────────────────────────────────────────────────────── */}
         <section id="tech-stack" className="section-panel tech-stack-panel">
           <h2>Tech Stack</h2>
           <div className="tech-stack-toolbar">
@@ -453,11 +398,9 @@ function App() {
                     <span>{String(groupIndex + 1).padStart(2, "0")}</span>
                     {group.label}
                   </p>
-                  <span className="tech-group__count">{group.logos.length} total</span>
+                  <span className="tech-group__count">{group.logos.length} tools</span>
                 </header>
-                <div
-                  className={`tech-carousel ${groupIndex % 2 === 1 ? "tech-carousel--reverse" : ""}`}
-                >
+                <div className={`tech-carousel ${groupIndex % 2 === 1 ? "tech-carousel--reverse" : ""}`}>
                   <ul className="tech-carousel-track" aria-label={`${group.label} technologies`}>
                     {[...group.logos, ...group.logos].map((logo, logoIndex) => (
                       <li
@@ -477,6 +420,7 @@ function App() {
           </div>
         </section>
 
+        {/* ── Professional Experience ──────────────────────────────────────── */}
         <section
           id="job-history-section"
           className="job-history-section section-panel"
@@ -484,14 +428,14 @@ function App() {
         >
           <h2 id="job-history-heading">Professional Experience</h2>
           <div className="job-timeline">
-            {jobHistory.map((employer) => (
+            {jobHistory.map(employer => (
               <article className="job-employer" key={employer.company}>
                 <header className="job-employer__header">
                   <h3 className="job-employer__name">{employer.company}</h3>
                   <p className="job-employer__location">{employer.location}</p>
                 </header>
                 <div className="job-employer__positions">
-                  {employer.positions.map((position) => (
+                  {employer.positions.map(position => (
                     <div
                       className="job-position"
                       key={`${employer.company}-${position.title}-${position.yearStart}`}
@@ -499,11 +443,11 @@ function App() {
                       <h4 className="job-position__title">{position.title}</h4>
                       <p className="job-position__dates">
                         <span className="subtitle-year">
-                          {position.dateLabel || `${position.yearStart} - ${position.yearEnd}`}
+                          {position.dateLabel || `${position.yearStart} – ${position.yearEnd}`}
                         </span>
                       </p>
                       <ul className="job-position__highlights">
-                        {position.highlights.map((highlight) => (
+                        {position.highlights.map(highlight => (
                           <li key={`${position.title}-${highlight.slice(0, 36)}`}>{highlight}</li>
                         ))}
                       </ul>
@@ -515,6 +459,7 @@ function App() {
           </div>
         </section>
 
+        {/* ── Projects ─────────────────────────────────────────────────────── */}
         <section id="projects" className="section-panel projects-section">
           <h2>Projects</h2>
           <p className="meta-copy">Selected work from my public GitHub repositories.</p>
@@ -534,12 +479,12 @@ function App() {
                 </header>
                 <p className="project-description">{project.description}</p>
                 <ul className="project-highlights">
-                  {project.highlights.map((highlight) => (
+                  {project.highlights.map(highlight => (
                     <li key={`${project.name}-${highlight.slice(0, 32)}`}>{highlight}</li>
                   ))}
                 </ul>
                 <div className="project-tags" aria-label={`${project.name} tags`}>
-                  {project.tags.map((tag) => (
+                  {project.tags.map(tag => (
                     <span className={`tag ${tag}`} key={`${project.name}-${tag}`}>
                       {tag}
                     </span>
@@ -550,19 +495,18 @@ function App() {
           </div>
         </section>
 
+        {/* ── Technical Skills ─────────────────────────────────────────────── */}
         <section id="skills" className="section-panel">
           <h2>Technical Skills</h2>
           <div className="skills-matrix" role="list" aria-label="Technical skills by category">
-            {skillGroups.map((skill) => {
-              const stackItems = skill.stack.split(",").map((item) => item.trim());
+            {skillGroups.map(skill => {
+              const stackItems = skill.stack.split(",").map(s => s.trim());
               return (
                 <article className="skill-row" role="listitem" key={skill.category}>
                   <h3 className="skill-row__category">{skill.category}</h3>
                   <ul className="skill-row__items">
-                    {stackItems.map((item) => (
-                      <li className="skill-pill" key={`${skill.category}-${item}`}>
-                        {item}
-                      </li>
+                    {stackItems.map(item => (
+                      <li className="skill-pill" key={`${skill.category}-${item}`}>{item}</li>
                     ))}
                   </ul>
                 </article>
@@ -571,10 +515,11 @@ function App() {
           </div>
         </section>
 
+        {/* ── Links ────────────────────────────────────────────────────────── */}
         <section id="links" className="section-panel links-panel">
           <h2>Links</h2>
           <div className="links-grid">
-            {profileLinks.map((link) => (
+            {profileLinks.map(link => (
               <a
                 className={`link-tile ${link.id === "home" ? "home-link" : ""}`}
                 key={link.id}
@@ -589,13 +534,16 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer>
         <section>
-          <p>&copy; {new Date().getFullYear()} Nirav Parekh</p>
+          <p>© {new Date().getFullYear()} Nirav Parekh</p>
           <p>Developed and copyrighted by Nirav Parekh</p>
         </section>
       </footer>
 
+      {/* ── Left floating nav ────────────────────────────────────────────── */}
       <nav className="floating-nav-left" aria-label="Quick navigation">
         <span className="floating-nav-left__label">Jump</span>
         <a
@@ -617,10 +565,11 @@ function App() {
           href="#projects"
           aria-current={activeSection === "projects" ? "location" : undefined}
         >
-          Projects
+          Work
         </a>
       </nav>
 
+      {/* ── Right floating actions ───────────────────────────────────────── */}
       <div
         className={`floating-actions-right ${isPageScrolled ? "is-scrolled" : ""}`}
         aria-label="Quick actions"
@@ -633,14 +582,9 @@ function App() {
           data-label="Call"
         >
           <svg viewBox="0 0 24 24" role="presentation">
-            <path
-              d="M6.6 3.8h2.8l1.4 4.1-2.2 1.7a16 16 0 0 0 5.8 5.8l1.7-2.2 4.1 1.4v2.8c0 .7-.6 1.3-1.3 1.3C10.7 18.7 5.3 13.3 5.3 5.1c0-.7.6-1.3 1.3-1.3Z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            <path d="M6.6 3.8h2.8l1.4 4.1-2.2 1.7a16 16 0 0 0 5.8 5.8l1.7-2.2 4.1 1.4v2.8c0 .7-.6 1.3-1.3 1.3C10.7 18.7 5.3 13.3 5.3 5.1c0-.7.6-1.3 1.3-1.3Z"
+              fill="none" stroke="currentColor" strokeWidth="1.8"
+              strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </a>
         <a
@@ -651,15 +595,11 @@ function App() {
           data-label="Email"
         >
           <svg viewBox="0 0 24 24" role="presentation">
-            <rect x="3.5" y="5.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" strokeWidth="1.8" />
-            <path
-              d="m4.5 7 7.5 6 7.5-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            <rect x="3.5" y="5.5" width="17" height="13" rx="2"
+              fill="none" stroke="currentColor" strokeWidth="1.8" />
+            <path d="m4.5 7 7.5 6 7.5-6"
+              fill="none" stroke="currentColor" strokeWidth="1.8"
+              strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </a>
         <a
@@ -672,15 +612,12 @@ function App() {
           data-label="Resume"
         >
           <svg viewBox="0 0 24 24" role="presentation">
-            <path
-              d="M7 3.5h7.6l4.4 4.4v12.6a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinejoin="round"
-            />
-            <path d="M14.6 3.5v4.4H19" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-            <path d="M9 12.2h6M9 15.5h6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            <path d="M7 3.5h7.6l4.4 4.4v12.6a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z"
+              fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+            <path d="M14.6 3.5v4.4H19"
+              fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+            <path d="M9 12.2h6M9 15.5h6"
+              fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
           </svg>
         </a>
       </div>

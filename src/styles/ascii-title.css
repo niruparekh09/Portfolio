@@ -3,13 +3,8 @@
 }
 
 @media (max-width: 700px) {
-  .ascii-art.large {
-    display: none;
-  }
-
-  .ascii-art.small {
-    display: block;
-  }
+  .ascii-art.large { display: none; }
+  .ascii-art.small { display: block; }
 }
 
 .ascii-title {
@@ -21,9 +16,20 @@
   max-width: 100%;
   z-index: 1;
   position: relative;
-  font-family: monospace;
+  font-family: "Geist Mono", monospace;
   line-height: 1;
   white-space: pre;
-  font-size: clamp(6.4px, 0.55vw, 9.35px);
-  margin: 0.35rem 0 0.55rem;
+  font-size: clamp(6.2px, 0.54vw, 9.1px);
+  margin: 0.3rem 0 0.5rem;
+  /* Amber gradient wash across the ASCII art */
+  background: linear-gradient(
+    105deg,
+    var(--color-primary-text-faded-1) 0%,
+    var(--color-primary-text) 38%,
+    var(--color-accent-1) 58%,
+    var(--color-primary-text-faded-1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
