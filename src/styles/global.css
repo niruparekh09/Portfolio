@@ -47,25 +47,32 @@ body {
   background-color: var(--color-page-background);
   font-family: "Geist", "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  padding: 4.5rem 1.5rem 3rem;
+  /* Left gutter column on desktop: 5rem for section labels */
+  padding: 4.5rem 1.5rem 4rem 6rem;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
   isolation: isolate;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "kern" 1, "liga" 1;
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
 }
 
-body::-webkit-scrollbar { width: 8px; }
-body::-webkit-scrollbar-track { background: transparent; }
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
 body::-webkit-scrollbar-thumb {
-  border: 2px solid transparent;
   border-radius: 999px;
   background: var(--color-border-strong);
-  background-clip: padding-box;
 }
 
 ::selection {
@@ -73,26 +80,52 @@ body::-webkit-scrollbar-thumb {
   background: var(--color-accent-1);
 }
 
-/* --- Headings — General Sans for display authority --- */
-h1, h2, h3, h4, h5, h6 {
+/* ── Type scale ───────────────────────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "General Sans", "Geist", Arial, Helvetica, sans-serif;
   margin: 0;
-  text-transform: none;
   letter-spacing: -0.022em;
   text-wrap: balance;
 }
 
-h1 { font-size: 2.45rem; font-weight: 700; }
-h2 { font-size: 1.9rem;  font-weight: 680; }
-h3 { font-size: 1.45rem; font-weight: 650; }
-h4 { font-size: 1.1rem;  font-weight: 630; }
-h5 { font-size: 1.25rem; font-weight: 610; }
-h6 { font-size: 1rem;    font-weight: 610; }
+h1 {
+  font-size: 2.5rem;
+  font-weight: 710;
+  line-height: 1.05;
+}
+h2 {
+  font-size: 1.85rem;
+  font-weight: 680;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 650;
+  line-height: 1.15;
+}
+h4 {
+  font-size: 1.05rem;
+  font-weight: 620;
+  line-height: 1.3;
+}
+h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
 
 a {
   color: var(--color-accent-1);
   text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.18em;
+  text-underline-offset: 0.2em;
   text-decoration-skip-ink: auto;
 }
 
@@ -100,9 +133,12 @@ a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--color-accent-1);
   outline-offset: 3px;
+  border-radius: 2px;
 }
 
-p { line-height: 1.68; }
+p {
+  line-height: 1.68;
+}
 
 hr {
   margin-left: 0;
@@ -112,108 +148,115 @@ hr {
   width: 100%;
 }
 
-/* --- Tables --- */
+/* ── Tables (global.css owns these for the resume/skills table) ──────────── */
 table {
   border-spacing: 0;
-  background: var(--color-primary-background-faded-2);
+  background: transparent;
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 4px;
   width: fit-content;
   min-width: 100%;
   margin: 1rem 0;
 }
 
 thead th {
-  background: var(--color-primary-background-faded-3);
-  font-weight: 600;
+  background: var(--color-primary-background-faded-2);
+  font-weight: 500;
   text-align: left;
-  padding: 0.85rem 1rem;
-  font-size: 0.875rem;
-  border-bottom: 1px solid var(--color-border);
+  padding: 0.8rem 1rem;
   font-family: "Geist Mono", monospace;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   color: var(--color-primary-text-faded-1);
+  border-bottom: 1px solid var(--color-border);
 }
 
 tbody td {
-  padding: 0.75rem 1rem;
+  padding: 0.7rem 1rem;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   vertical-align: top;
 }
 
-tbody tr { transition: background 0.2s ease; }
-tbody tr:hover,
-tbody tr:nth-child(even):hover { background: var(--color-accent-1-minimal); }
+tbody tr {
+  transition: background 0.15s ease;
+}
+tbody tr:hover {
+  background: var(--color-surface-hover);
+}
+tbody td a {
+  transition: color 0.15s ease;
+}
+tbody td a:hover {
+  color: var(--color-primary-text);
+}
+tbody tr:nth-child(even) {
+  background: var(--color-row-even);
+}
+tbody tr + tr td {
+  border-top: 1px solid var(--color-border);
+}
 
-tbody td a { transition: color 0.2s ease; }
-tbody td a:hover { color: var(--color-primary-text); }
-tbody tr:nth-child(even) { background: var(--color-row-even); }
-tbody tr + tr td { border-top: 1px solid var(--color-border); }
+thead th:first-child {
+  border-top-left-radius: 3px;
+}
+thead th:last-child {
+  border-top-right-radius: 3px;
+}
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
 
-thead th:first-child { border-top-left-radius: 7px; }
-thead th:last-child  { border-top-right-radius: 7px; }
-tbody tr:last-child td:first-child { border-bottom-left-radius: 7px; }
-tbody tr:last-child td:last-child  { border-bottom-right-radius: 7px; }
-
-/* --- Date chips / year pills --- */
+/* ── Date / year chips ───────────────────────────────────────────────────── */
 .subtitle-year {
   display: inline-flex;
   align-items: center;
-  min-height: 1.45rem;
-  font-family: "Geist Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 0.68rem;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.66rem;
   font-variant-numeric: tabular-nums;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  color: var(--color-accent-1);
-  padding: 0.24rem 0.5rem;
-  border: 1px solid var(--color-border-accent);
-  border-radius: 3px;
+  letter-spacing: 0.05em;
+  color: var(--color-primary-text-faded-2);
   white-space: nowrap;
-  background: var(--color-accent-1-minimal);
 }
 
-/* --- Tag chips in tables --- */
-table .tags-mobile { display: none; margin-top: 0.2rem; }
+/* ── Tag chips in tables ──────────────────────────────────────────────────── */
+table .tags-mobile {
+  display: none;
+  margin-top: 0.2rem;
+}
 
 @media (max-width: 800px) {
-  td div.title-subtitle { margin-left: 2px; }
-  table .tags-col { display: none; }
-  table .tags-mobile { display: inline-block; }
-  .subtitle-year { margin-bottom: 0.4rem; }
+  table .tags-col {
+    display: none;
+  }
+  table .tags-mobile {
+    display: inline-block;
+  }
 }
 
-table .tag { font-size: 0.68rem; }
-
+table .tag,
 table span.tag {
-  padding: 2px 6px;
-  border-radius: 3px;
+  padding: 1px 5px;
+  border-radius: 2px;
   background: var(--color-primary-background-faded-3);
   border: 1px solid var(--color-border);
   display: inline-block;
   margin: 0.1rem 0.1rem;
   font-family: "Geist Mono", monospace;
-  font-size: 0.68rem;
+  font-size: 0.64rem;
+  color: var(--color-primary-text-faded-1);
 }
 
-table span.tag.software     { background-color: #2a4aaa; border-color: #1e3880; }
-table span.tag.fullstack    { background-color: #5a2eb5; border-color: #3d1f80; }
-table span.tag.backend      { background-color: #1555b0; border-color: #103f85; }
-table span.tag.security     { color: #170b00; background-color: #32e653; border-color: #c07820; }
-table span.tag.ai           { color: #021008; background-color: #18d870; border-color: #12aa58; }
-table span.tag.architecture { background-color: #1e7878; border-color: #165858; }
-table span.tag.microservices{ background-color: #7a4a18; border-color: #5c3810; }
-table span.tag.api          { background-color: #2d45aa; border-color: #22348a; }
-table span.tag.problem-solving { background-color: #7a20a8; border-color: #5e1882; }
-
-/* --- Main layout --- */
-main, footer {
+/* ── Layout containers ───────────────────────────────────────────────────── */
+main,
+footer {
   position: relative;
   z-index: 1;
-  width: min(100%, 960px);
+  width: min(100%, 920px);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -222,60 +265,84 @@ main, footer {
 
 section {
   width: 100%;
-  max-width: 960px;
+  max-width: 920px;
   display: flex;
   flex-direction: column;
 }
 
-section.header { margin: 2rem 0 0; }
+section.header {
+  margin: 1.5rem 0 0;
+}
 
+/* ── Footer ──────────────────────────────────────────────────────────────── */
 footer {
-  margin-top: 5rem;
+  margin-top: 6rem;
   margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
 }
 
 footer section {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 0.5rem 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
   width: 100%;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--color-rule);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-rule-strong);
 }
 
-footer a.soft { color: var(--color-primary-text-faded-1); }
-footer section p:first-of-type { margin: 0; }
 footer p {
   color: var(--color-primary-text-faded-2);
   margin: 0;
-  font-size: 0.75rem;
   font-family: "Geist Mono", monospace;
-  letter-spacing: 0.025em;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
   line-height: 1.5;
 }
 
-button, a { -webkit-tap-highlight-color: transparent; }
-
-/* --- Responsive layout adjustments --- */
-@media (min-width: 751px) and (max-width: 1080px) {
-  body { padding-right: 4.5rem; padding-left: 1.75rem; }
-  main, footer, section { max-width: 100%; }
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-@media (max-width: 750px) {
-  html { scroll-padding-top: calc(4rem + env(safe-area-inset-top)); }
+/* ── Mid-width ────────────────────────────────────────────────────────────── */
+@media (min-width: 751px) and (max-width: 1100px) {
   body {
-    padding:
-      calc(4.5rem + env(safe-area-inset-top))
-      1rem
-      calc(6.4rem + env(safe-area-inset-bottom));
+    padding-left: 1.75rem;
+    padding-right: 2rem;
   }
-  main, footer, section { width: 100%; max-width: 100%; min-width: 0; }
-  section.header { margin-top: 0; }
-  .subtitle-year { font-size: 0.63rem; padding: 0.2rem 0.42rem; }
-  footer { margin-top: 3.5rem; }
-  footer section { grid-template-columns: 1fr; gap: 0.2rem; }
+  main,
+  footer,
+  section {
+    max-width: 100%;
+  }
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+@media (max-width: 750px) {
+  html {
+    scroll-padding-top: calc(4rem + env(safe-area-inset-top));
+  }
+  body {
+    padding: calc(4rem + env(safe-area-inset-top)) 1.1rem
+      calc(5rem + env(safe-area-inset-bottom));
+    /* No left gutter on mobile */
+    padding-left: 1.1rem;
+  }
+  main,
+  footer,
+  section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  section.header {
+    margin-top: 0;
+  }
+  footer {
+    margin-top: 4rem;
+  }
+  footer section {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }

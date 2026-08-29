@@ -4,6 +4,7 @@ import jobHistory from "./data/job-history.json";
 import projects from "./data/projects.json";
 import skillGroups from "./data/skills.json";
 
+/* ── ASCII art ────────────────────────────────────────────────────────────── */
 const asciiTitleLarge = `$$\\   $$\\ $$\\                                    $$$$$$$\\                               $$\\       $$\\       
 $$$\\  $$ |\\__|                                   $$  __$$\\                              $$ |      $$ |      
 $$$$\\ $$ |$$\\  $$$$$$\\  $$$$$$\\ $$\\    $$\\       $$ |  $$ |$$$$$$\\   $$$$$$\\   $$$$$$\\  $$ |  $$\\ $$$$$$$\\  
@@ -19,179 +20,133 @@ const asciiTitleSmall = ` _   _ _
 | |\\  | | | | (_| |\\ V /         
 |_| \\_|_|_|  \\__,_| \\_/  PAREKH  `;
 
+/* ── Content ──────────────────────────────────────────────────────────────── */
 const displayName = "Nirav Parekh";
+const displayFirstName = "Nirav";
+const displayLastName = "Parekh";
 
 const introLines = [
-  "Backend-focused Full Stack Engineer specializing in enterprise applications, secure APIs, and systems built for the long run. I care about what happens in real applications — how the system handles real traffic, how the codebase survives changing requirements, how the next engineer can actually understand what I built.",
-  "System design is where I think best. Hard problems are what keep me engaged. Continuous learning is how I stay sharp. End-to-end ownership is just how I work."
+  "Backend-focused Full Stack Engineer specialising in enterprise applications, secure APIs, and systems built for the long run. I care about what happens when software meets reality — how the system holds under real traffic, how the codebase survives changing requirements, how the next engineer reads what I built.",
+  "System design is where I think best. Hard problems are what keep me engaged. End-to-end ownership is just how I work.",
 ];
 
 const techStackGroups = [
   {
     label: "Backend, data & security",
     logos: [
-      { name: "Java",                           src: "/assets/images/tech-stack/java.png" },
-      { name: "Spring Boot",                    src: "/assets/images/tech-stack/spring_boot.png" },
-      { name: "Spring Security",                src: "/assets/images/tech-stack/spring.png" },
-      { name: "Spring AI",                      src: "/assets/images/tech-stack/ai_llm.png" },
-      { name: "Hibernate",                      src: "/assets/images/tech-stack/hibernate.png" },
-      { name: "JUnit",                          src: "/assets/images/tech-stack/junit.png" },
-      { name: "Mockito",                        src: "/assets/images/tech-stack/mockito.png" },
-      { name: "OAuth2 / OIDC",                  src: "/assets/images/tech-stack/auth0.png" },
-      { name: "Security (JWT, RBAC, mTLS)",     src: "/assets/images/tech-stack/vault.png" },
-      { name: "MySQL",                          src: "/assets/images/tech-stack/mysql.png" },
-      { name: "PostgreSQL",                     src: "/assets/images/tech-stack/postgresql.png" },
-      { name: "MongoDB",                        src: "/assets/images/tech-stack/mongodb.png" },
-      { name: "Kafka",                          src: "/assets/images/tech-stack/kafka.png" }
-    ]
+      { name: "Java", src: "/assets/images/tech-stack/java.png" },
+      { name: "Spring Boot", src: "/assets/images/tech-stack/spring_boot.png" },
+      { name: "Spring Security", src: "/assets/images/tech-stack/spring.png" },
+      { name: "Spring AI", src: "/assets/images/tech-stack/ai_llm.png" },
+      { name: "Hibernate", src: "/assets/images/tech-stack/hibernate.png" },
+      { name: "JUnit", src: "/assets/images/tech-stack/junit.png" },
+      { name: "Mockito", src: "/assets/images/tech-stack/mockito.png" },
+      { name: "OAuth2 / OIDC", src: "/assets/images/tech-stack/auth0.png" },
+      {
+        name: "Security (JWT, RBAC, mTLS)",
+        src: "/assets/images/tech-stack/vault.png",
+      },
+      { name: "MySQL", src: "/assets/images/tech-stack/mysql.png" },
+      { name: "PostgreSQL", src: "/assets/images/tech-stack/postgresql.png" },
+      { name: "MongoDB", src: "/assets/images/tech-stack/mongodb.png" },
+      { name: "Kafka", src: "/assets/images/tech-stack/kafka.png" },
+    ],
   },
   {
     label: "Platform, delivery & product",
     logos: [
-      { name: "REST API Design",   src: "/assets/images/tech-stack/rest.png" },
-      { name: "Maven",             src: "/assets/images/tech-stack/maven.png" },
-      { name: "Docker",            src: "/assets/images/tech-stack/docker.png" },
-      { name: "CI/CD",             src: "/assets/images/tech-stack/ci_cd.png" },
-      { name: "GitHub Actions",    src: "/assets/images/tech-stack/github.png" },
-      { name: "Git",               src: "/assets/images/tech-stack/git.png" },
-      { name: "AI/LLM Integration",src: "/assets/images/tech-stack/ai_llm.png" },
-      { name: "JavaScript",        src: "/assets/images/tech-stack/javascript.png" },
-      { name: "TypeScript",        src: "/assets/images/tech-stack/typescript.png" },
-      { name: "React",             src: "/assets/images/tech-stack/react.png" },
-      { name: "Next.js",           src: "/assets/images/tech-stack/next_js.png" },
-      { name: "Tailwind CSS",      src: "/assets/images/tech-stack/tailwind_css.png" },
-      { name: "Redux",             src: "/assets/images/tech-stack/redux.png" }
-    ]
-  }
+      { name: "REST API Design", src: "/assets/images/tech-stack/rest.png" },
+      { name: "Maven", src: "/assets/images/tech-stack/maven.png" },
+      { name: "Docker", src: "/assets/images/tech-stack/docker.png" },
+      { name: "CI/CD", src: "/assets/images/tech-stack/ci_cd.png" },
+      { name: "GitHub Actions", src: "/assets/images/tech-stack/github.png" },
+      { name: "Git", src: "/assets/images/tech-stack/git.png" },
+      {
+        name: "AI/LLM Integration",
+        src: "/assets/images/tech-stack/ai_llm.png",
+      },
+      { name: "JavaScript", src: "/assets/images/tech-stack/javascript.png" },
+      { name: "TypeScript", src: "/assets/images/tech-stack/typescript.png" },
+      { name: "React", src: "/assets/images/tech-stack/react.png" },
+      { name: "Next.js", src: "/assets/images/tech-stack/next_js.png" },
+      {
+        name: "Tailwind CSS",
+        src: "/assets/images/tech-stack/tailwind_css.png",
+      },
+      { name: "Redux", src: "/assets/images/tech-stack/redux.png" },
+    ],
+  },
 ];
 
 const socialLinks = {
-  github:   "https://github.com/niruparekh09",
+  github: "https://github.com/niruparekh09",
   leetcode: "https://leetcode.com/u/niruparekh09/",
-  linkedin: "https://www.linkedin.com/in/niravparekh090"
+  linkedin: "https://www.linkedin.com/in/niravparekh090",
 };
 
 const contactInfo = {
   phoneDisplay: "+91-7746000398",
-  phoneHref:    "tel:+917746000398",
-  email:        "niruparekh09@gmail.com",
-  resumeHref:   "/Nirav_Parekh_Resume.pdf"
+  phoneHref: "tel:+917746000398",
+  email: "niruparekh09@gmail.com",
+  resumeHref: "/Nirav_Parekh_Resume.pdf",
 };
 
+/* Indexed link list — no icons needed, just label + domain */
 const profileLinks = [
   {
-    id: "linkedin",    label: "LinkedIn",
+    id: "linkedin",
+    label: "LinkedIn",
+    domain: "linkedin.com/in/niravparekh090",
     href: socialLinks.linkedin,
-    icon: "/assets/images/icons/linkedin.svg",
-    openInNewTab: true
+    openInNewTab: true,
   },
   {
-    id: "github",      label: "GitHub",
+    id: "github",
+    label: "GitHub",
+    domain: "github.com/niruparekh09",
     href: socialLinks.github,
-    icon: "/assets/images/icons/github.svg",
-    openInNewTab: true
+    openInNewTab: true,
   },
   {
-    id: "leetcode",    label: "LeetCode",
+    id: "leetcode",
+    label: "LeetCode",
+    domain: "leetcode.com/u/niruparekh09",
     href: socialLinks.leetcode,
-    icon: "/assets/images/icons/leetcode.svg",
-    openInNewTab: true
+    openInNewTab: true,
   },
   {
-    id: "email",       label: "Email",
+    id: "email",
+    label: "Email",
+    domain: contactInfo.email,
     href: `mailto:${contactInfo.email}`,
-    icon: "/assets/images/icons/email.svg"
   },
   {
-    id: "resume",      label: "Resume (PDF)",
+    id: "resume",
+    label: "Resume",
+    domain: "PDF · Nirav_Parekh_Resume.pdf",
     href: contactInfo.resumeHref,
-    icon: "/assets/images/icons/resume.svg",
-    openInNewTab: true
+    openInNewTab: true,
   },
-  {
-    id: "home",        label: "Home",
-    href: "#top",
-    icon: "/assets/images/icons/home.svg"
-  }
 ];
 
-/* ── Icon renderer ─────────────────────────────────────────────────────────── */
-function renderProfileIcon(linkId, iconPath) {
-  if (linkId === "email") {
-    return (
-      <span className="link-tile__icon link-tile__icon--email" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="presentation">
-          <rect x="3.2" y="5.3" width="17.6" height="13.4" rx="2"
-            fill="none" stroke="currentColor" strokeWidth="1.7" />
-          <path d="M4.5 7.2 12 13l7.5-5.8"
-            fill="none" stroke="currentColor" strokeWidth="1.7"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </span>
-    );
-  }
-
-  if (linkId === "resume") {
-    return (
-      <span className="link-tile__icon link-tile__icon--resume" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="presentation">
-          <path d="M7 3.5h7.5L19 8v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-15a1 1 0 0 1 1-1Z"
-            fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
-          <path d="M14.5 3.5V8H19"
-            fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
-          <path d="M9 12.2h6M9 15.4h6M9 18.2h4.5"
-            fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-        </svg>
-      </span>
-    );
-  }
-
-  if (linkId === "leetcode") {
-    return (
-      <span className="link-tile__icon link-tile__icon--leetcode" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="presentation">
-          <path d="m9 7-5 5 5 5M15 7l5 5-5 5"
-            fill="none" stroke="currentColor" strokeWidth="1.9"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </span>
-    );
-  }
-
-  if (linkId === "home") {
-    return (
-      <span className="link-tile__icon link-tile__icon--home" aria-hidden="true">
-        <svg viewBox="0 0 24 24" role="presentation">
-          <path d="M3 12L12 3l9 9"
-            fill="none" stroke="currentColor" strokeWidth="1.7"
-            strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M5 10v9a1 1 0 0 0 1 1h4v-5h4v5h4a1 1 0 0 0 1-1v-9"
-            fill="none" stroke="currentColor" strokeWidth="1.7"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </span>
-    );
-  }
-
-  return (
-    <img
-      src={iconPath}
-      alt=""
-      aria-hidden="true"
-      className={`link-tile__icon link-tile__icon--${linkId}`}
-      decoding="async"
-    />
-  );
-}
-
-/* ── Constants ─────────────────────────────────────────────────────────────── */
+/* ── Constants ────────────────────────────────────────────────────────────── */
 const THEME_STORAGE_KEY = "nrv-portfolio-theme";
-const DARK_THEME  = "dark";
+const DARK_THEME = "dark";
 const LIGHT_THEME = "light";
 
-const IST_CLOCK_FORMATTER = new Intl.DateTimeFormat("en-IN", {
-  hour: "2-digit", minute: "2-digit", second: "2-digit",
-  hour12: true, timeZone: "Asia/Kolkata"
+const IST_FORMATTER = new Intl.DateTimeFormat("en-IN", {
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour12: true,
+  timeZone: "Asia/Kolkata",
+});
+
+const DATE_FORMATTER = new Intl.DateTimeFormat("en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric",
+  timeZone: "Asia/Kolkata",
 });
 
 function getInitialTheme() {
@@ -199,46 +154,45 @@ function getInitialTheme() {
   try {
     const saved = window.localStorage.getItem(THEME_STORAGE_KEY);
     if (saved === DARK_THEME || saved === LIGHT_THEME) return saved;
-  } catch { /* ignore */ }
+  } catch {
+    /* ignore */
+  }
   return DARK_THEME;
 }
 
-function getIstClockText() {
-  return `${IST_CLOCK_FORMATTER.format(new Date())} IST`;
-}
-
-/* ── IST Clock ─────────────────────────────────────────────────────────────── */
+/* ── IST Clock ────────────────────────────────────────────────────────────── */
 function IstClock() {
-  const [clockText, setClockText] = useState(getIstClockText);
-
+  const [t, setT] = useState(() => IST_FORMATTER.format(new Date()));
   useEffect(() => {
-    const id = window.setInterval(() => setClockText(getIstClockText()), 1000);
-    return () => window.clearInterval(id);
+    const id = setInterval(() => setT(IST_FORMATTER.format(new Date())), 1000);
+    return () => clearInterval(id);
   }, []);
-
-  return <span className="nrv-chip__clock">{clockText}</span>;
+  return <span className="topbar-clock">{t} IST</span>;
 }
 
-/* ── App ───────────────────────────────────────────────────────────────────── */
+/* ── App ──────────────────────────────────────────────────────────────────── */
 function App() {
-  const typedNameRef  = useRef(null);
-  const [theme, setTheme]               = useState(getInitialTheme);
+  const typedNameRef = useRef(null);
+  const [theme, setTheme] = useState(getInitialTheme);
   const [activeSection, setActiveSection] = useState("");
-  const [isPageScrolled, setIsPageScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  /* Persist + apply theme */
+  /* Apply + persist theme */
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    try { window.localStorage.setItem(THEME_STORAGE_KEY, theme); }
-    catch { /* ignore */ }
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+      /* ignore */
+    }
   }, [theme]);
 
-  /* Typed.js animation */
+  /* Typed.js */
   useEffect(() => {
-    if (!typedNameRef.current) return undefined;
+    if (!typedNameRef.current) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       typedNameRef.current.textContent = displayName;
-      return undefined;
+      return;
     }
     const typed = new Typed(typedNameRef.current, {
       strings: [
@@ -246,7 +200,7 @@ function App() {
         "Backend Engineer",
         "Enterprise Application Developer",
         "System Design Enthusiast",
-        "Problem Solver"
+        "Problem Solver",
       ],
       typeSpeed: 44,
       backSpeed: 28,
@@ -254,20 +208,30 @@ function App() {
       loop: true,
       smartBackspace: true,
       showCursor: true,
-      cursorChar: "_"
+      cursorChar: "_",
     });
     return () => typed.destroy();
   }, []);
 
-  /* Active section tracking */
+  /* Active section for topbar nav */
   useEffect(() => {
-    const sectionIds = ["tech-stack", "job-history-section", "projects"];
-    const sections   = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+    const ids = [
+      "tech-stack",
+      "job-history-section",
+      "projects",
+      "skills",
+      "links",
+    ];
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
     const update = () => {
-      const readingLine = window.scrollY + window.innerHeight * 0.34;
+      const line = window.scrollY + window.innerHeight * 0.3;
       let next = "";
-      sections.forEach(s => { if (s.offsetTop <= readingLine) next = s.id; });
+      sections.forEach((s) => {
+        if (s.offsetTop <= line) next = s.id;
+      });
       setActiveSection(next);
     };
 
@@ -280,101 +244,149 @@ function App() {
     };
   }, []);
 
-  /* Scroll state for floating chrome */
+  /* Topbar border on scroll */
   useEffect(() => {
-    const update = () => setIsPageScrolled(window.scrollY > 72);
+    const update = () => setIsScrolled(window.scrollY > 40);
     update();
     window.addEventListener("scroll", update, { passive: true });
     return () => window.removeEventListener("scroll", update);
   }, []);
 
-  const isLightTheme     = theme === LIGHT_THEME;
-  const themeToggleLabel = isLightTheme ? "Switch to Dark" : "Switch to Light";
+  const isLight = theme === LIGHT_THEME;
+  const themeLabel = isLight ? "Switch to dark" : "Switch to light";
+  const todayStr = DATE_FORMATTER.format(new Date());
+  const sectionIsActive = (id) => activeSection === id;
 
   return (
     <>
       {/* ── Skip link ─────────────────────────────────────────────────────── */}
-      <a className="skip-link" href="#main-content">Skip to content</a>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
 
-      {/* ── Brand chip (top-left) ─────────────────────────────────────────── */}
-      <div
-        className={`floating-brand-left ${isPageScrolled ? "is-scrolled" : ""}`}
-        aria-label="Brand and time"
+      {/* ── Top bar (opaque, no blur) ──────────────────────────────────────── */}
+      <header
+        className={`site-topbar${isScrolled ? " is-scrolled" : ""}`}
+        role="banner"
       >
-        <div className="nrv-chip">
-          <span className="nrv-chip__brand">NRV</span>
+        <div className="topbar-left">
+          <a
+            className="topbar-wordmark"
+            href="#top"
+            aria-label="Nirav Parekh — back to top"
+          >
+            NRV
+          </a>
           <IstClock />
         </div>
-      </div>
 
-      {/* ── Theme toggle (top-right) ──────────────────────────────────────── */}
-      <div
-        className={`floating-top-right ${isPageScrolled ? "is-scrolled" : ""}`}
-        aria-label="Theme controls"
-      >
-        <button
-          type="button"
-          className="theme-toggle"
-          onClick={() => setTheme(t => t === DARK_THEME ? LIGHT_THEME : DARK_THEME)}
-          aria-label={themeToggleLabel}
-          title={themeToggleLabel}
-        >
-          <span className="theme-toggle__icon" aria-hidden="true">
-            {isLightTheme ? (
-              /* Moon icon */
-              <svg viewBox="0 0 24 24" role="presentation">
-                <path d="M21 12.8A9 9 0 1 1 11.2 3a7.3 7.3 0 0 0 9.8 9.8Z"
-                  fill="none" stroke="currentColor" strokeWidth="1.8"
-                  strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            ) : (
-              /* Sun icon */
-              <svg viewBox="0 0 24 24" role="presentation">
-                <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                <path d="M12 2.8v2.3M12 18.9v2.3M21.2 12h-2.3M5.1 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2 5.5 5.5"
-                  fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-              </svg>
-            )}
-          </span>
-        </button>
-      </div>
+        <nav className="topbar-nav" aria-label="Page sections">
+          {[
+            { href: "#tech-stack", id: "tech-stack", label: "Stack" },
+            {
+              href: "#job-history-section",
+              id: "job-history-section",
+              label: "Exp",
+            },
+            { href: "#projects", id: "projects", label: "Work" },
+            { href: "#skills", id: "skills", label: "Skills" },
+            { href: "#links", id: "links", label: "Links" },
+          ].map(({ href, id, label }) => (
+            <a
+              key={id}
+              href={href}
+              className={sectionIsActive(id) ? "is-active" : ""}
+              aria-current={sectionIsActive(id) ? "location" : undefined}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
 
-      {/* ── Main content ──────────────────────────────────────────────────── */}
+        <div className="topbar-right">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={() =>
+              setTheme((t) => (t === DARK_THEME ? LIGHT_THEME : DARK_THEME))
+            }
+            aria-label={themeLabel}
+            title={themeLabel}
+          >
+            <span className="theme-toggle__icon" aria-hidden="true">
+              {isLight ? (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 12.8A9 9 0 1 1 11.2 3a7.3 7.3 0 0 0 9.8 9.8Z" />
+                </svg>
+              ) : (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                >
+                  <circle cx="12" cy="12" r="4.2" />
+                  <path d="M12 2.8v2.3M12 18.9v2.3M21.2 12h-2.3M5.1 12H2.8M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7M18.5 18.5l-1.7-1.7M7.2 7.2 5.5 5.5" />
+                </svg>
+              )}
+            </span>
+          </button>
+        </div>
+      </header>
+
+      {/* ── Main ──────────────────────────────────────────────────────────── */}
       <main id="main-content" className="portfolio-main">
-
         {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section id="top" className="header section-panel hero-panel">
-          <h1 className="sr-only">{displayName}</h1>
+          <h1 className="sr-only">{displayName} — Backend Engineer</h1>
 
-          {/* Terminal prompt line */}
-          <p className="terminal-prompt" aria-hidden="true">
-            nirav@backend:~$&nbsp;<span style={{ color: "var(--color-primary-text-faded-1)" }}>whoami</span>
-          </p>
+          {/* Dateline — the editorial unexpected element */}
+          {/* Reads like a newspaper dateline: location · status · date */}
+          <ul className="hero-dateline" aria-label="Location and availability">
+            <li>India</li>
+            <li className="dateline-avail">Open to work</li>
+            <li>{todayStr}</li>
+          </ul>
 
-          {/* Typed name line */}
+          {/* Typed name line (desktop) */}
           <p className="name-typed-line" aria-hidden="true">
             <span className="name-typed-prefix">→</span>
-            <span className="name-typed-value" ref={typedNameRef} />
+            <span ref={typedNameRef} />
           </p>
 
-          {/* Mobile fallback nameplate */}
-          <p className="mobile-nameplate">{displayName}</p>
+          {/* Mobile nameplate — typographic, split first/last */}
+          <p className="mobile-nameplate" aria-hidden="true">
+            {displayFirstName}
+            <span>{displayLastName}</span>
+          </p>
 
           {/* ASCII title */}
           <div className="ascii-title">
-            <pre className="ascii-art large" aria-hidden="true">{asciiTitleLarge}</pre>
-            <pre className="ascii-art small" aria-hidden="true">{asciiTitleSmall}</pre>
+            <pre className="ascii-art large" aria-hidden="true">
+              {asciiTitleLarge}
+            </pre>
+            <pre className="ascii-art small" aria-hidden="true">
+              {asciiTitleSmall}
+            </pre>
           </div>
 
-          {/* Intro paragraphs */}
+          {/* Intro */}
           <div className="intro-copy">
-            {introLines.map(line => (
-              <p key={line}>{line}</p>
+            {introLines.map((line) => (
+              <p key={line.slice(0, 24)}>{line}</p>
             ))}
           </div>
 
-          {/* Keyword signal row */}
-          <ul className="backend-signals" aria-label="Engineering focus">
+          {/* Keyword strip */}
+          <ul className="backend-signals" aria-label="Engineering focus areas">
             <li>Java</li>
             <li>Spring Boot</li>
             <li>Go</li>
@@ -384,32 +396,49 @@ function App() {
           </ul>
         </section>
 
-        {/* ── Tech Stack ────────────────────────────────────────────────────── */}
+        {/* ── Tech Stack ──────────────────────────────────────────────────── */}
         <section id="tech-stack" className="section-panel tech-stack-panel">
-          <h2>Tech Stack</h2>
+          <h2 data-label="Stack">Tech Stack</h2>
           <div className="tech-stack-toolbar">
-            <p>Technologies I use across backend systems, delivery, and product work.</p>
+            <p>
+              Tools I use across backend systems, platform engineering, and
+              product delivery.
+            </p>
           </div>
           <div className="tech-groups">
-            {techStackGroups.map((group, groupIndex) => (
+            {techStackGroups.map((group, gi) => (
               <article className="tech-group" key={group.label}>
                 <header className="tech-group__header">
                   <p className="tech-group__label">
-                    <span>{String(groupIndex + 1).padStart(2, "0")}</span>
+                    <span>{String(gi + 1).padStart(2, "0")}</span>
                     {group.label}
                   </p>
-                  <span className="tech-group__count">{group.logos.length} tools</span>
+                  <span className="tech-group__count">
+                    {group.logos.length} tools
+                  </span>
                 </header>
-                <div className={`tech-carousel ${groupIndex % 2 === 1 ? "tech-carousel--reverse" : ""}`}>
-                  <ul className="tech-carousel-track" aria-label={`${group.label} technologies`}>
-                    {[...group.logos, ...group.logos].map((logo, logoIndex) => (
+                <div
+                  className={`tech-carousel${gi % 2 === 1 ? " tech-carousel--reverse" : ""}`}
+                >
+                  <ul
+                    className="tech-carousel-track"
+                    aria-label={`${group.label} technologies`}
+                  >
+                    {[...group.logos, ...group.logos].map((logo, li) => (
                       <li
                         className="tech-logo-item"
-                        key={`${group.label}-${logo.name}-${logoIndex}`}
+                        key={`${group.label}-${logo.name}-${li}`}
                         title={logo.name}
-                        aria-hidden={logoIndex >= group.logos.length ? "true" : undefined}
+                        aria-hidden={
+                          li >= group.logos.length ? "true" : undefined
+                        }
                       >
-                        <img src={logo.src} alt={logo.name} className="tech-logo" decoding="async" />
+                        <img
+                          src={logo.src}
+                          alt={logo.name}
+                          className="tech-logo"
+                          decoding="async"
+                        />
                         <span className="tech-logo-name">{logo.name}</span>
                       </li>
                     ))}
@@ -420,35 +449,37 @@ function App() {
           </div>
         </section>
 
-        {/* ── Professional Experience ──────────────────────────────────────── */}
+        {/* ── Experience ──────────────────────────────────────────────────── */}
         <section
           id="job-history-section"
           className="job-history-section section-panel"
-          aria-labelledby="job-history-heading"
+          aria-labelledby="exp-heading"
         >
-          <h2 id="job-history-heading">Professional Experience</h2>
+          <h2 id="exp-heading" data-label="Exp">
+            Professional Experience
+          </h2>
           <div className="job-timeline">
-            {jobHistory.map(employer => (
+            {jobHistory.map((employer) => (
               <article className="job-employer" key={employer.company}>
                 <header className="job-employer__header">
                   <h3 className="job-employer__name">{employer.company}</h3>
                   <p className="job-employer__location">{employer.location}</p>
                 </header>
                 <div className="job-employer__positions">
-                  {employer.positions.map(position => (
+                  {employer.positions.map((pos) => (
                     <div
                       className="job-position"
-                      key={`${employer.company}-${position.title}-${position.yearStart}`}
+                      key={`${employer.company}-${pos.title}-${pos.yearStart}`}
                     >
-                      <h4 className="job-position__title">{position.title}</h4>
+                      <h4 className="job-position__title">{pos.title}</h4>
                       <p className="job-position__dates">
                         <span className="subtitle-year">
-                          {position.dateLabel || `${position.yearStart} – ${position.yearEnd}`}
+                          {pos.dateLabel || `${pos.yearStart}–${pos.yearEnd}`}
                         </span>
                       </p>
                       <ul className="job-position__highlights">
-                        {position.highlights.map(highlight => (
-                          <li key={`${position.title}-${highlight.slice(0, 36)}`}>{highlight}</li>
+                        {pos.highlights.map((h) => (
+                          <li key={h.slice(0, 36)}>{h}</li>
                         ))}
                       </ul>
                     </div>
@@ -459,16 +490,16 @@ function App() {
           </div>
         </section>
 
-        {/* ── Projects ─────────────────────────────────────────────────────── */}
+        {/* ── Projects ────────────────────────────────────────────────────── */}
         <section id="projects" className="section-panel projects-section">
-          <h2>Projects</h2>
-          <p className="meta-copy">Selected work from my public GitHub repositories.</p>
+          <h2 data-label="Work">Projects</h2>
+          <p className="meta-copy">Selected public work from GitHub.</p>
           <div className="projects-timeline">
-            {projects.map((project, projectIndex) => (
+            {projects.map((project, pi) => (
               <article className="project-item" key={project.name}>
                 <header className="project-item__header">
                   <span className="project-item__index" aria-hidden="true">
-                    {String(projectIndex + 1).padStart(2, "0")}
+                    {String(pi + 1).padStart(2, "0")}
                   </span>
                   <h3 className="project-item__title">
                     <a href={project.href} target="_blank" rel="noreferrer">
@@ -479,13 +510,19 @@ function App() {
                 </header>
                 <p className="project-description">{project.description}</p>
                 <ul className="project-highlights">
-                  {project.highlights.map(highlight => (
-                    <li key={`${project.name}-${highlight.slice(0, 32)}`}>{highlight}</li>
+                  {project.highlights.map((h) => (
+                    <li key={h.slice(0, 32)}>{h}</li>
                   ))}
                 </ul>
-                <div className="project-tags" aria-label={`${project.name} tags`}>
-                  {project.tags.map(tag => (
-                    <span className={`tag ${tag}`} key={`${project.name}-${tag}`}>
+                <div
+                  className="project-tags"
+                  aria-label={`${project.name} tags`}
+                >
+                  {project.tags.map((tag) => (
+                    <span
+                      className={`tag ${tag}`}
+                      key={`${project.name}-${tag}`}
+                    >
                       {tag}
                     </span>
                   ))}
@@ -495,18 +532,31 @@ function App() {
           </div>
         </section>
 
-        {/* ── Technical Skills ─────────────────────────────────────────────── */}
+        {/* ── Skills ──────────────────────────────────────────────────────── */}
         <section id="skills" className="section-panel">
-          <h2>Technical Skills</h2>
-          <div className="skills-matrix" role="list" aria-label="Technical skills by category">
-            {skillGroups.map(skill => {
-              const stackItems = skill.stack.split(",").map(s => s.trim());
+          <h2 data-label="Skills">Technical Skills</h2>
+          <div
+            className="skills-matrix"
+            role="list"
+            aria-label="Technical skills by category"
+          >
+            {skillGroups.map((skill) => {
+              const items = skill.stack.split(",").map((s) => s.trim());
               return (
-                <article className="skill-row" role="listitem" key={skill.category}>
+                <article
+                  className="skill-row"
+                  role="listitem"
+                  key={skill.category}
+                >
                   <h3 className="skill-row__category">{skill.category}</h3>
                   <ul className="skill-row__items">
-                    {stackItems.map(item => (
-                      <li className="skill-pill" key={`${skill.category}-${item}`}>{item}</li>
+                    {items.map((item) => (
+                      <li
+                        className="skill-pill"
+                        key={`${skill.category}-${item}`}
+                      >
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </article>
@@ -515,112 +565,52 @@ function App() {
           </div>
         </section>
 
-        {/* ── Links ────────────────────────────────────────────────────────── */}
+        {/* ── Links ───────────────────────────────────────────────────────── */}
         <section id="links" className="section-panel links-panel">
-          <h2>Links</h2>
-          <div className="links-grid">
-            {profileLinks.map(link => (
+          <h2 data-label="Links">Links</h2>
+          {/* Indexed list — no icon grid */}
+          <nav
+            className="links-list"
+            aria-label="External profiles and contact"
+          >
+            {profileLinks.map((link, i) => (
               <a
-                className={`link-tile ${link.id === "home" ? "home-link" : ""}`}
                 key={link.id}
+                className="link-entry"
                 href={link.href}
                 target={link.openInNewTab ? "_blank" : undefined}
                 rel={link.openInNewTab ? "noreferrer" : undefined}
               >
-                {renderProfileIcon(link.id, link.icon)}
-                <span>{link.label}</span>
+                <span className="link-entry__num" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="link-entry__label">{link.label}</span>
+                <span className="link-entry__domain" aria-hidden="true">
+                  {link.domain}
+                </span>
               </a>
             ))}
+          </nav>
+
+          {/* Contact bar — replaces floating actions */}
+          <div className="contact-bar" aria-label="Direct contact">
+            <span className="contact-bar__label">Contact</span>
+            <a href={contactInfo.phoneHref}>{contactInfo.phoneDisplay}</a>
+            <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+            <a href={contactInfo.resumeHref} target="_blank" rel="noreferrer">
+              Resume PDF
+            </a>
           </div>
         </section>
       </main>
 
-      {/* ── Footer ───────────────────────────────────────────────────────── */}
+      {/* ── Footer ──────────────────────────────────────────────────────── */}
       <footer>
         <section>
           <p>© {new Date().getFullYear()} Nirav Parekh</p>
-          <p>Developed and copyrighted by Nirav Parekh</p>
+          <p>Designed and built by Nirav Parekh</p>
         </section>
       </footer>
-
-      {/* ── Left floating nav ────────────────────────────────────────────── */}
-      <nav className="floating-nav-left" aria-label="Quick navigation">
-        <span className="floating-nav-left__label">Jump</span>
-        <a
-          className={activeSection === "tech-stack" ? "is-active" : ""}
-          href="#tech-stack"
-          aria-current={activeSection === "tech-stack" ? "location" : undefined}
-        >
-          Tech
-        </a>
-        <a
-          className={activeSection === "job-history-section" ? "is-active" : ""}
-          href="#job-history-section"
-          aria-current={activeSection === "job-history-section" ? "location" : undefined}
-        >
-          Exp
-        </a>
-        <a
-          className={activeSection === "projects" ? "is-active" : ""}
-          href="#projects"
-          aria-current={activeSection === "projects" ? "location" : undefined}
-        >
-          Work
-        </a>
-      </nav>
-
-      {/* ── Right floating actions ───────────────────────────────────────── */}
-      <div
-        className={`floating-actions-right ${isPageScrolled ? "is-scrolled" : ""}`}
-        aria-label="Quick actions"
-      >
-        <a
-          className="floating-action"
-          href={contactInfo.phoneHref}
-          aria-label="Call Nirav"
-          title="Call"
-          data-label="Call"
-        >
-          <svg viewBox="0 0 24 24" role="presentation">
-            <path d="M6.6 3.8h2.8l1.4 4.1-2.2 1.7a16 16 0 0 0 5.8 5.8l1.7-2.2 4.1 1.4v2.8c0 .7-.6 1.3-1.3 1.3C10.7 18.7 5.3 13.3 5.3 5.1c0-.7.6-1.3 1.3-1.3Z"
-              fill="none" stroke="currentColor" strokeWidth="1.8"
-              strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </a>
-        <a
-          className="floating-action"
-          href={`mailto:${contactInfo.email}`}
-          aria-label="Email Nirav"
-          title="Email"
-          data-label="Email"
-        >
-          <svg viewBox="0 0 24 24" role="presentation">
-            <rect x="3.5" y="5.5" width="17" height="13" rx="2"
-              fill="none" stroke="currentColor" strokeWidth="1.8" />
-            <path d="m4.5 7 7.5 6 7.5-6"
-              fill="none" stroke="currentColor" strokeWidth="1.8"
-              strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </a>
-        <a
-          className="floating-action"
-          href={contactInfo.resumeHref}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Open resume in new tab"
-          title="Resume"
-          data-label="Resume"
-        >
-          <svg viewBox="0 0 24 24" role="presentation">
-            <path d="M7 3.5h7.6l4.4 4.4v12.6a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z"
-              fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-            <path d="M14.6 3.5v4.4H19"
-              fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-            <path d="M9 12.2h6M9 15.5h6"
-              fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
-        </a>
-      </div>
     </>
   );
 }

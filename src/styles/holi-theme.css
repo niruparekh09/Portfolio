@@ -1,8 +1,3 @@
-/*
- * Adapted from Holi Theme (MIT License, Ayush Saini)
- * Re-toned for green/slate palette
- */
-
 p code {
   display: inline-block;
   color: #e8dfc8;
@@ -62,9 +57,13 @@ pre[class*="language-"] {
 .token.comment,
 .token.prolog,
 .token.doctype,
-.token.cdata   { color: #5a5440; }
+.token.cdata {
+  color: #5a5440;
+}
 
-.token.punctuation { color: #32e653; }
+.token.punctuation {
+  color: #e8a030;
+}
 
 .token.property,
 .token.tag,
@@ -72,32 +71,44 @@ pre[class*="language-"] {
 .token.number,
 .token.constant,
 .token.symbol,
-.token.deleted { color: #e8dfc8; }
+.token.deleted {
+  color: #e8dfc8;
+}
 
 .token.selector,
 .token.attr-name,
 .token.builtin,
-.token.inserted { color: #e05a30; }
+.token.inserted {
+  color: #e05a30;
+}
 
 .token.string,
-.token.char { color: #60b8d8; }
+.token.char {
+  color: #60b8d8;
+}
 
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #32e653;
+  color: #e8a030;
   background: transparent;
 }
 
 .token.atrule,
 .token.attr-value,
-.token.keyword { color: #a8d850; }
+.token.keyword {
+  color: #a8d850;
+}
 
 .token.function,
-.token.class-name { color: #70d8c8; }
+.token.class-name {
+  color: #70d8c8;
+}
 
 .token.regex,
 .token.important,
-.token.variable { color: #e8dfc8; }
+.token.variable {
+  color: #e8dfc8;
+}
